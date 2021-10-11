@@ -1,0 +1,58 @@
+@import "../../colors";
+
+.title{
+    color: $lightest;
+    font-size: 3em;
+}
+
+.project-page{
+    width: 100vw;
+    height: $pageHeight;
+    background-color: $light;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &__single-project {
+        width: 15em;
+        height: 25em;
+        background-color: $darkest;
+        padding: 1em;
+        margin: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        &__info {
+            &__title {
+                text-align: center;
+                font-size: 2em;
+                font-weight: 700;
+                color: $lightest;
+            }
+            &__date{
+                position: relative;
+                top: -.6em;
+                text-align: center;
+                font-style: italic;
+                font-size: .75em;
+                font-weight: 400;
+                color: $light;
+            }
+            &__description {
+                text-align: center;
+                font-size: 1.15em;
+                font-weight: 500;
+                color: $light;
+            }
+        }
+        &__img {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import "../../colors";
+
+.header{
+    background-color: $light;
+    position: relative;
+    width: 100vw;
+    height: $pageHeight;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &__title{
+        max-width: 1500px;
+        font-size: 5em;
+        padding: 35px;
+        color: $lightest;
+        font-weight: bold;
+    }
+    &__text{
+        width: 75vw;
+        max-width: 1080px;
+    }
+}

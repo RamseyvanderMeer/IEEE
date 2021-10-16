@@ -1,22 +1,29 @@
 @import "../../colors";
 
-.title{
-    color: $lightest;
-    font-size: 3em;
-}
-
-.project-page{
+.project-page {
     width: 100vw;
-    height: $pageHeight;
     background-color: $light;
     overflow: hidden;
+    padding-bottom: 3em;
+    &__title {
+        color: $lightest;
+        text-align: center;
+        font-size: 3em;
+        position: relative;
+        margin: 1em;
+        font-weight: 700;
+        text-shadow: 0.6px 0.6px 2px $dark;
+    }
 }
 
 .projects {
     &__single-project {
+        position: relative;
         width: 80%;
         height: 25em;
         background-color: $darkest;
+        border-radius: 1em;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         padding: 1em;
         margin-left: auto;
         margin-right: auto;
@@ -28,20 +35,22 @@
             &__title {
                 text-align: center;
                 font-size: 2em;
-                font-weight: 700;
+                font-weight: 600;
                 color: $lightest;
+                
             }
-            &__date{
+            &__date {
                 position: relative;
-                top: -.6em;
+                top: -0.6em;
                 text-align: center;
                 font-style: italic;
-                font-size: .75em;
+                font-size: 0.75em;
                 font-weight: 400;
                 color: $light;
             }
             &__description {
                 text-align: center;
+                margin-top: 1em;
                 font-size: 1.15em;
                 font-weight: 500;
                 color: $light;
@@ -53,6 +62,7 @@
             flex-direction: column;
             align-items: center;
             justify-items: center;
+            margin-top: 1em;
             img {
                 max-height: 7em;
             }

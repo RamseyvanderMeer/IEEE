@@ -1,5 +1,19 @@
 @import "../../colors";
 
+.title{
+    color: $lightest;
+    text-align: center;
+    font-size: 3em;
+    position: relative;
+    font-weight: 700;
+    text-shadow: 0.6px 0.6px 2px $dark;
+}
+
+.main-container{
+    padding: 1em;
+    background-color: $light;
+}
+
 .contactForm-center{
     padding: 10px;
     display: flex;

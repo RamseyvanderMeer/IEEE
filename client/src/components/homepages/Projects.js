@@ -12,11 +12,11 @@ const Projects = () => {
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
-            breakpoint: { max: 4000, min: 3000 },
-            items: 5
+            breakpoint: { max: 4000, min: 2000 },
+            items: 4
         },
         desktop: {
-            breakpoint: { max: 3000, min: 1024 },
+            breakpoint: { max: 2000, min: 1024 },
             items: 3
         },
         tablet: {
@@ -31,8 +31,8 @@ const Projects = () => {
 
     return (
         <div className="project-page">
-            <div class="title">
-                IEEE Events
+            <div class="project-page__title">
+                IEEE Professional Events
             </div>
             <div class="projects">
                 <Carousel
@@ -41,7 +41,6 @@ const Projects = () => {
                     responsive={responsive}
                     customTransition="transform 300ms ease-in-out"
                     transitionDuration={300}
-                    // centerMode={true}
                     >
                     {projects.map((item) => (
                         <div className="projects__single-project" key={item._id}>

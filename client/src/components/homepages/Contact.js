@@ -55,7 +55,7 @@ const Contact = () => {
     return (
         <div className="main-container">
             <div className="contactForm">
-                <h2 className="title">contact form</h2>
+                <h2 className="title">Contact</h2>
                 <div className="contactForm-center">
                     <div className="contact_form">
                         <form onSubmit={formSubmit}>
@@ -87,10 +87,6 @@ const Contact = () => {
                                 <button type="submit">Send{bool? <b className="load" ><img src={Load} /></b>:''}</button>
                             </div>
                         </form>
-                    </div>
-                    <div className="contact-info">
-                        <h4>send your message</h4>
-                        <img src={Profile} alt="" />
                     </div>
                 </div>
             </div>

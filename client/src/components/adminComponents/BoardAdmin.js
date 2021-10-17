@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
-const ExperienceAdmin = () => {
+const BoardAdmin = () => {
 
-    const [experience, setExperience] = useState('');
-    const [experienceData, setExperienceData] = useState([]);
+    const [board, setBoard] = useState('');
+    const [boardData, setBoardData] = useState([]);
     const [message, setMessage] = useState('');
     const [messageCond, setMessageCond] = useState(false);
 
@@ -13,34 +13,34 @@ const ExperienceAdmin = () => {
         // fetching data
         const fetchData = async () => {
             try {
-                const res = await axios.get(`/experience`);
+                const res = await axios.get(`/board`);
                 //  console.log(res.exprerience);
-                setExperienceData(res.data);
+                setBoardData(res.data);
             } catch (err) {
             }
         }
         fetchData()
     }, [])
     // onchange
-    const onchangeExperience = (e) => {
-        setExperience(e.target.value);
-        // console.log(experience);
+    const onchangeBoard = (e) => {
+        setBoard(e.target.value);
+        // console.log(board);
     }
-    // submit experience
+    // submit board
     const handleSubmit = (e) => {
         e.preventDefault();
-        const postExperience = {
-            experience
+        const postBoard = {
+            board
         }
-        setExperience('');
-        axios.post(`/experience`, postExperience)
+        setBoard('');
+        axios.post(`/board`, postBoard)
             .then(res => {
             })
             .catch(err => console.log(err))
     }
     // delete about
-    const deleteExperience = (id) => {
-        axios.delete(`/experience/${id}`)
+    const deleteBoard = (id) => {
+        axios.delete(`/board/${id}`)
             .then(res => {
                 setMessageCond(true);
                 setMessage(`${res.data.msg}`);
@@ -53,33 +53,33 @@ const ExperienceAdmin = () => {
             }).catch(err => console.log(err))
 
         // delete fro ui
-        const experienceFilterDel = experienceData.filter(item => item._id !== id)
+        const boardFilterDel = boardData.filter(item => item._id !== id)
 
-        setExperienceData(experienceFilterDel);
+        setBoardData(boardFilterDel);
     }
 
     return (
         <div className="same-component" >
             <div className="same-form">
                 <form onSubmit={handleSubmit}>
-                    <h4>Experience component</h4>
-                    <label htmlfor="text">Experience</label>
-                    <input type="text" onChange={onchangeExperience} value={experience} />
+                    <h4>Board component</h4>
+                    <label htmlfor="text">Board</label>
+                    <input type="text" onChange={onchangeBoard} value={board} />
                     <button type="submit">Add item</button>
                 </form>
             </div>
 
             <div className="same-item">
                 <div className="about-info">
-                    {experienceData.map(item => (
+                    {boardData.map(item => (
                         <div className="same-admin" key={item._id}>
                             <div className="icons">
-                                <Link to={`/editExperience/${item._id}`}><i className="fas fa-edit"></i></Link>
-                                <i className="fas fa-trash" onClick={() => deleteExperience(item._id)}></i>
+                                <Link to={`/editBoard/${item._id}`}><i className="fas fa-edit"></i></Link>
+                                <i className="fas fa-trash" onClick={() => deleteBoard(item._id)}></i>
                             </div>
-                            {/* single experience */}
-                            <div className="single-experience">
-                                <p>{item.experience}</p>
+                            {/* single board */}
+                            <div className="single-board">
+                                <p>{item.board}</p>
 
                             </div>
                             <h3 className={messageCond ? "new-delete item-delete-tab" : "item-delete-tab"}>{message}</h3>
@@ -91,4 +91,4 @@ const ExperienceAdmin = () => {
     )
 }
 
-export default ExperienceAdmin
+export default BoardAdmin

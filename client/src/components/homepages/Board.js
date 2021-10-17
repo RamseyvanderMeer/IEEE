@@ -2,23 +2,23 @@ import React, { useContext } from 'react'
 import '../../App.scss'
 import { DataContext } from '../Context/GlobalContext'
 
-const Experience = () => {
+const Board = () => {
 
     const state = useContext(DataContext)
-    const [experience] = state.experience
+    const [board] = state.board
 
     return (
         <div>
             <div className="main-container">
                 <h2 className="title">
-                    Experience
+                    Board
                 </h2>
-                <div className="experience">
-                    <div className="experience-center">
-                        {experience.map((item) => (
-                            <div className="single-experience" key={item._id}>
+                <div className="board">
+                    <div className="board-center">
+                        {board.map((item) => (
+                            <div className="single-board" key={item._id}>
                                 <p>
-                                    {item.experience}
+                                    {item.board}
                                 </p>
                             </div>
                         ))}
@@ -30,4 +30,4 @@ const Experience = () => {
     )
 }
 
-export default Experience
+export default Board

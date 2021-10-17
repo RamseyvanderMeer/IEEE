@@ -2,7 +2,7 @@ import React from 'react'
 import './Admin.scss'
 import AboutAdmin from './AboutAdmin'
 import SocialAdmin from './SocialAdmin'
-import ExperienceAdmin from './ExperienceAdmin'
+import BoardAdmin from './BoardAdmin'
 import TechnicalsAdmin from './TechnicalsAdmin'
 
 
@@ -43,8 +43,8 @@ const Admin = () => {
                     <br />
 
 
-                    {/* <h4 className="admin-title">Experience Component</h4>
-                    <ExperienceAdmin />
+                    {/* <h4 className="admin-title">Board Component</h4>
+                    <BoardAdmin />
 
 
                     <br /> */}

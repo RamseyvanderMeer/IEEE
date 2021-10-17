@@ -27,7 +27,7 @@ const Footer = () => {
                                 <li><Link to='/' onClick={() => scrollToElement('Home')}>Home</Link></li>
                                 <li><Link to='/' onClick={() => scrollToElement('About')}>About</Link></li>
                                 <li><Link to='/' onClick={() => scrollToElement('Social')}>Social</Link></li>
-                                <li><Link to='/' onClick={() => scrollToElement('Exprience')}>Experience</Link></li>
+                                <li><Link to='/' onClick={() => scrollToElement('Exprience')}>Board</Link></li>
                                 <li><Link to='/' onClick={() => scrollToElement('Technicals')}>Technicals</Link></li>
                                 <li><Link to='/' onClick={() => scrollToElement('Contact')}>Contact</Link></li>
                                 <li><Link className="admin" to='/'>Admin</Link></li>

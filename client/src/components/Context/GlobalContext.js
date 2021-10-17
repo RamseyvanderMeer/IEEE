@@ -8,7 +8,7 @@ export const DataProvider = ({ children }) => {
     const [about, setAbout] = useState([]);
     const [social, setSocial] = useState([]);
     const [technicals, setTechnicals] = useState([]);
-    const [experience, setExperience] = useState([]);
+    const [board, setBoard] = useState([]);
     const [loginFin, setLoginFin] = useState(true);
     const [dataFin, setDataFin] = useState(true);
 
@@ -59,10 +59,10 @@ export const DataProvider = ({ children }) => {
         setTechnicals(res4.data);
 
 
-        // ...for fetchning experience...
-        const res3 = await axios.get(`/experience`);
+        // ...for fetchning board...
+        const res3 = await axios.get(`/board`);
         // console.log(res3.data);
-        setExperience(res3.data);
+        setBoard(res3.data);
     }
 
     useEffect(() => {
@@ -77,7 +77,7 @@ export const DataProvider = ({ children }) => {
             //    fetchAbout();
             //    fetchSocial();
             //    fetchTechnicals();
-            //    fetchExperience();
+            //    fetchBoard();
 
         } catch (err) {
             console.log(err);
@@ -88,7 +88,7 @@ export const DataProvider = ({ children }) => {
     const state = {
         about: [about, setAbout],
         social: [social, setSocial],
-        experience: [experience, setExperience],
+        board: [board, setBoard],
         technicals: [technicals, setTechnicals],
         isLogin: [isLogin, setIsLogin]
 

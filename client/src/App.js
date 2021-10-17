@@ -5,7 +5,7 @@ import Navbar from './components/homepages/Navbar'
 import About from './components/homepages/About'
 import Social from './components/homepages/Social'
 import Technicals from './components/homepages/Technicals'
-import Experience from './components/homepages/Experience'
+import Board from './components/homepages/Board'
 import Contact from './components/homepages/Contact'
 import Footer from './components/homepages/Footer'
 import Login from './components/homepages/Login'
@@ -16,7 +16,7 @@ import Admin from './components/adminComponents/Admin'
 import EditAbout from './components/editComponents/EditAbout'
 import EditSocial from './components/editComponents/EditSocial'
 import EditTechnicals from './components/editComponents/EditTechnicals'
-import EditExperience from './components/editComponents/EditExperience'
+import EditBoard from './components/editComponents/EditBoard'
 
 import { Route } from 'react-router-dom'
 import { Element } from 'react-scroll'
@@ -44,8 +44,8 @@ function App() {
       <Element className='Technicals'>
         <Route exact path='/' component={Technicals} />
       </Element>
-      {/* <Element className='Experience'>
-        <Route exact path='/' component={Experience} />
+      {/* <Element className='Board'>
+        <Route exact path='/' component={Board} />
       </Element> */}
       <Element className='Contact'>
         <Route exact path='/' component={Contact} />
@@ -57,7 +57,7 @@ function App() {
       <Route exact path='/admin' {...console.log(isLogin)} render={() => isLogin ? <Admin /> : <Login />} />
       <Route exact path='/editSocial/:id' component={EditSocial} />
       <Route exact path='/editTechnical/:id' component={EditTechnicals} />
-      <Route exact path='/editExperience/:id' component={EditExperience} />
+      <Route exact path='/editBoard/:id' component={EditBoard} />
       <Route exact path='/editAbout/:id' component={EditAbout} />
 
 

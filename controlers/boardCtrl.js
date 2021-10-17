@@ -1,27 +1,27 @@
-const experienceSchema = require('../models/experienceModel');
+const boardSchema = require('../models/boardModel');
 
 
 //get all users
-exports.getExperience = async (req, res) => {
-    const experience = await experienceSchema.find();
+exports.getBoard = async (req, res) => {
+    const board = await boardSchema.find();
     try {
-        res.json(experience);
+        res.json(board);
     } catch (error) {
         res.status(500).json({ msg: 'server problems' })
     }
 }
 
 //add user
-exports.addExperience = async (req, res) => {
-    const { experience } = req.body;
+exports.addBoard = async (req, res) => {
+    const { board } = req.body;
 
     //first way async await
     try {
-        const newExperience = new experienceSchema({
-            experience: experience
+        const newBoard = new boardSchema({
+            board: board
         })
-        await newExperience.save();
-        res.json(newExperience);
+        await newBoard.save();
+        res.json(newBoard);
     } catch (error) {
         res.status(500).json({ msg: 'server problems' })
     }
@@ -38,11 +38,11 @@ exports.addExperience = async (req, res) => {
 
 
 //get user by id
-exports.getExperienceID = async (req, res) => {
+exports.getBoardID = async (req, res) => {
     //first way
     try {
-        const experience = await experienceSchema.findById(req.params.id)
-        res.json(experience)
+        const board = await boardSchema.findById(req.params.id)
+        res.json(board)
     } catch (error) {
         res.status(500).json({ msg: 'server problems' })
     }
@@ -55,14 +55,14 @@ exports.getExperienceID = async (req, res) => {
 
 
 //update user by id
-exports.updateExperience = async (req, res) => {
+exports.updateBoard = async (req, res) => {
     try {
-        const { experience } = req.body;
-        const newExperience = await experienceSchema.findByIdAndUpdate(req.params.id, {
-            experience
+        const { board } = req.body;
+        const newBoard = await boardSchema.findByIdAndUpdate(req.params.id, {
+            board
         });
 
-        let results = newExperience.save()
+        let results = newBoard.save()
         await results
         res.json({ msg: 'Items Updated' })
     } catch (error) {
@@ -72,11 +72,11 @@ exports.updateExperience = async (req, res) => {
 
 
 //delete user by id
-exports.delExperience = async (req, res) => {
+exports.delBoard = async (req, res) => {
     try {
-        const experience = await experienceSchema.findByIdAndDelete(req.params.id);
+        const board = await boardSchema.findByIdAndDelete(req.params.id);
 
-        experience;
+        board;
     
         res.json({msg:"Item deleted"})
     } catch (error) {

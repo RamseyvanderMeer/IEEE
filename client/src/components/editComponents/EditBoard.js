@@ -4,9 +4,9 @@ import './Edit.scss'
 import axios from 'axios'
 
 
-const EditExperience = (props) =>{
+const EditBoard = (props) =>{
 
-    const [experience, setExperience] = useState('')
+    const [board, setBoard] = useState('')
     const [message, setMessage] = useState('')
     const history = useHistory()
 
@@ -14,9 +14,9 @@ const EditExperience = (props) =>{
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`/experience/${props.match.params.id}`)
+                const res = await axios.get(`/board/${props.match.params.id}`)
                 // console.log(res.data)
-                setExperience(res.data.experience)
+                setBoard(res.data.board)
             } catch (error) {
                 console.log(error)
             }
@@ -24,15 +24,15 @@ const EditExperience = (props) =>{
         fetchData()
     }, [])
 
-    const onChangeExperience = (e) => {
-        setExperience(e.target.value)
-        // console.log(experience)
+    const onChangeBoard = (e) => {
+        setBoard(e.target.value)
+        // console.log(board)
     }
 
-    const updateExperience = async (e) => {
+    const updateBoard = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.put(`/experience/update/${props.match.params.id}`, { experience })
+            const res = await axios.put(`/board/update/${props.match.params.id}`, { board })
             setMessage(`${res.data.msg}`)
         } catch (error) {
             console.log(error)
@@ -50,14 +50,14 @@ const EditExperience = (props) =>{
                     <div className="same-form">
                         <form>
                             <h3 className="updated">{message}</h3>
-                            <h4>Experience Component</h4>
-                            <label htmlfor="text">Experience</label>
+                            <h4>Board Component</h4>
+                            <label htmlfor="text">Board</label>
                             <input 
-                            value={experience}
-                            onChange={onChangeExperience}
+                            value={board}
+                            onChange={onChangeBoard}
                             type="text" />
                             <div className="btns">
-                                <button type="submit" onClick={updateExperience}>Update</button>
+                                <button type="submit" onClick={updateBoard}>Update</button>
                                 <Link to="/admin"><button className="cancel-btn">cancel</button></Link>
                             </div>
                         </form>
@@ -68,4 +68,4 @@ const EditExperience = (props) =>{
     )
 }
 
-export default EditExperience
+export default EditBoard

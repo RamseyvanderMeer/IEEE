@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
-import './Projects.scss'
+import './Social.scss'
 import { DataContext } from '../Context/GlobalContext'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const Projects = () => {
+const Social = () => {
 
     const state = useContext(DataContext)
-    const [projects] = state.projects
+    const [social] = state.technicals
 
     const responsive = {
         superLargeDesktop: {
@@ -30,11 +30,11 @@ const Projects = () => {
     };
 
     return (
-        <div className="project-page">
-            <div class="project-page__title">
-                IEEE Professional Events
+        <div className="social-page">
+            <div class="social-page__title">
+                IEEE Social Events
             </div>
-            <div class="projects">
+            <div class="social">
                 <Carousel
                     swipeable={true}
                     draggable={true}
@@ -42,19 +42,19 @@ const Projects = () => {
                     customTransition="transform 300ms ease-in-out"
                     transitionDuration={300}
                     >
-                    {projects.map((item) => (
-                        <div className="projects__single-project" key={item._id}>
-                            <div className="projects__single-project__info">
-                                <h3 className="projects__single-project__info__title">
+                    {social.map((item) => (
+                        <div className="social__single-social" key={item._id}>
+                            <div className="social__single-social__info">
+                                <h3 className="social__single-social__info__title">
                                     {item.title}
                                 </h3>
-                                <p className="projects__single-project__info__date">
+                                <p className="social__single-social__info__date">
                                     {item.date}
                                 </p>
-                                <div className="projects__single-project__img">
+                                <div className="social__single-social__img">
                                     <img src={item.images.url} alt="" />
                                 </div>
-                                <p className="projects__single-project__info__description">
+                                <p className="social__single-social__info__description">
                                     {item.description}
                                 </p>
                             </div>
@@ -64,8 +64,7 @@ const Projects = () => {
             </div>
 
         </div>
-
     )
 }
 
-export default Projects
+export default Social

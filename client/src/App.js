@@ -3,8 +3,8 @@ import React, { useCallback, useContext, useState } from 'react'
 import Header from './components/homepages/Header'
 import Navbar from './components/homepages/Navbar'
 import About from './components/homepages/About'
-import Education from './components/homepages/Education'
-import Projects from './components/homepages/Projects'
+import Social from './components/homepages/Social'
+import Technicals from './components/homepages/Technicals'
 import Experience from './components/homepages/Experience'
 import Contact from './components/homepages/Contact'
 import Footer from './components/homepages/Footer'
@@ -14,8 +14,8 @@ import Register from './components/homepages/Register'
 import Admin from './components/adminComponents/Admin'
 
 import EditAbout from './components/editComponents/EditAbout'
-import EditEducation from './components/editComponents/EditEducation'
-import EditProjects from './components/editComponents/EditProjects'
+import EditSocial from './components/editComponents/EditSocial'
+import EditTechnicals from './components/editComponents/EditTechnicals'
 import EditExperience from './components/editComponents/EditExperience'
 
 import { Route } from 'react-router-dom'
@@ -38,11 +38,11 @@ function App() {
       <Element className='About'>
         <Route exact path='/' component={About} />
       </Element>
-      <Element className='Education'>
-        <Route exact path='/' component={Education} />
+      <Element className='Social'>
+        <Route exact path='/' component={Social} />
       </Element>
-      <Element className='Projects'>
-        <Route exact path='/' component={Projects} />
+      <Element className='Technicals'>
+        <Route exact path='/' component={Technicals} />
       </Element>
       {/* <Element className='Experience'>
         <Route exact path='/' component={Experience} />
@@ -55,8 +55,8 @@ function App() {
       <Route exact path='/login' render={() => isLogin ? <Admin /> : <Login setIsLogin={setIsLogin} />} />
       <Route exact path='/register' render={() => isLogin ? '' : <Register />} />
       <Route exact path='/admin' {...console.log(isLogin)} render={() => isLogin ? <Admin /> : <Login />} />
-      <Route exact path='/editEducation/:id' component={EditEducation} />
-      <Route exact path='/editProject/:id' component={EditProjects} />
+      <Route exact path='/editSocial/:id' component={EditSocial} />
+      <Route exact path='/editTechnical/:id' component={EditTechnicals} />
       <Route exact path='/editExperience/:id' component={EditExperience} />
       <Route exact path='/editAbout/:id' component={EditAbout} />
 

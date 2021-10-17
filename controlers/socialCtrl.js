@@ -1,27 +1,31 @@
-const educationSchema = require('../models/educationModel');
+const socialSchema = require('../models/socialModel');
 
 
 //get all users
-exports.getEducation = async (req, res) => {
-    const education = await educationSchema.find();
+exports.getSocial = async (req, res) => {
+    const social = await socialSchema.find();
     try {
-        res.json(education);
+        res.json(social);
     } catch (error) {
         res.status(500).json({ msg: 'server problems' })
     }
 }
 
 //add user
-exports.addEducation = async (req, res) => {
-    const { education } = req.body;
+exports.addSocial = async (req, res) => {
+    const { title, product_id, date, description, images } = req.body;
 
     //first way async await
     try {
-        const newEducation = new educationSchema({
-            education: education
+        const newSocial = new socialSchema({
+            title, 
+            product_id, 
+            date, 
+            description, 
+            images
         })
-        await newEducation.save();
-        res.json(newEducation);
+        await newSocial.save();
+        res.json(newSocial);
     } catch (error) {
         res.status(500).json({ msg: 'server problems' })
     }
@@ -38,11 +42,11 @@ exports.addEducation = async (req, res) => {
 
 
 //get user by id
-exports.getEducationID = async (req, res) => {
+exports.getSocialID = async (req, res) => {
     //first way
     try {
-        const education = await educationSchema.findById(req.params.id)
-        res.json(education)
+        const social = await socialSchema.findById(req.params.id)
+        res.json(social)
     } catch (error) {
         res.status(500).json({ msg: 'server problems' })
     }
@@ -55,14 +59,18 @@ exports.getEducationID = async (req, res) => {
 
 
 //update user by id
-exports.updateEducation = async (req, res) => {
+exports.updateSocial = async (req, res) => {
     try {
-        const { education } = req.body;
-        const newEducation = await educationSchema.findByIdAndUpdate(req.params.id, {
-            education
+        const { title, product_id, date, description, images } = req.body;
+        const newSocial = await socialSchema.findByIdAndUpdate(req.params.id, {
+            title, 
+            product_id, 
+            date, 
+            description, 
+            images
         });
 
-        let results = newEducation.save()
+        let results = newSocial.save()
         await results
         res.json({ msg: 'Items Updated' })
     } catch (error) {
@@ -72,11 +80,11 @@ exports.updateEducation = async (req, res) => {
 
 
 //delete user by id
-exports.delEducation = async (req, res) => {
+exports.delSocial = async (req, res) => {
     try {
-        const education = await educationSchema.findByIdAndDelete(req.params.id);
+        const social = await socialSchema.findByIdAndDelete(req.params.id);
 
-        education;
+        social;
     
         res.json({msg:"Item deleted"})
     } catch (error) {

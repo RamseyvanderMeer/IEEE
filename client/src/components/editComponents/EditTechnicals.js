@@ -10,7 +10,7 @@ const initialState = {
     date: ''
 }
 
-const EditProjects = (props) => {
+const EditTechnicals = (props) => {
 
     const [product, setProducts] = useState(initialState)
     const [images, setImages] = useState(false)
@@ -72,7 +72,7 @@ const EditProjects = (props) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`/project/${props.match.params.id}`)
+                const res = await axios.get(`/technical/${props.match.params.id}`)
                 setProducts({
                     product_id: res.data.product_id,
                     date: res.data.date,
@@ -90,7 +90,7 @@ const EditProjects = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.put(`/project/update/${props.match.params.id}`, { ...product, images })
+            const res = await axios.put(`/technical/update/${props.match.params.id}`, { ...product, images })
             setMessage(res.data.msg)
 
             setImages(false)
@@ -113,7 +113,7 @@ const EditProjects = (props) => {
                     <div className="same-form">
                         <form onSubmit={handleSubmit}>
                             <h3 className="updated">{message}</h3>
-                            <h4>Projects components</h4>
+                            <h4>Technicals components</h4>
                             <label htmlFor="text">Id</label>
                             <input
                                 type="text"
@@ -173,4 +173,4 @@ const EditProjects = (props) => {
     )
 }
 
-export default EditProjects
+export default EditTechnicals

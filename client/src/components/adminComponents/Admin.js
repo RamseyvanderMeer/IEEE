@@ -1,9 +1,9 @@
 import React from 'react'
 import './Admin.scss'
 import AboutAdmin from './AboutAdmin'
-import EducationAdmin from './EducationAdmin'
+import SocialAdmin from './SocialAdmin'
 import ExperienceAdmin from './ExperienceAdmin'
-import ProjectsAdmin from './ProjectsAdmin'
+import TechnicalsAdmin from './TechnicalsAdmin'
 
 
 const Admin = () => {
@@ -24,8 +24,8 @@ const Admin = () => {
                     <br />
 
 
-                    <h4 className="admin-title">Education Component</h4>
-                    <EducationAdmin />
+                    <h4 className="admin-title">Social Component</h4>
+                    <SocialAdmin />
 
 
                     <br />
@@ -34,8 +34,8 @@ const Admin = () => {
                     <br />
 
 
-                    <h4 className="admin-title">Projects Component</h4>
-                    <ProjectsAdmin />
+                    <h4 className="admin-title">Technicals Component</h4>
+                    <TechnicalsAdmin />
 
                     <br />
                     <br />
@@ -43,11 +43,11 @@ const Admin = () => {
                     <br />
 
 
-                    <h4 className="admin-title">Experience Component</h4>
+                    {/* <h4 className="admin-title">Experience Component</h4>
                     <ExperienceAdmin />
 
 
-                    <br />
+                    <br /> */}
                 </div>
             </div>
         </div>

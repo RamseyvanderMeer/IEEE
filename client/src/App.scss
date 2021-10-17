@@ -59,13 +59,13 @@ a {
 //     padding: 200px 4% 0 4%;
 // }
 
-// //education
+// //social
 
-// .education {
+// .social {
 //     margin: 20px 0;
 // }
 
-// .single-education {
+// .single-social {
 //     background-color: $darkish;
 //     margin: 0 auto;
 //     margin-bottom: 20px;
@@ -77,12 +77,12 @@ a {
 // }
 
 // @media screen and (min-width: 860px) {
-//     .education-center {
+//     .social-center {
 //         display: flex;
 //         flex-wrap: wrap;
 //         justify-content: space-between;
 //     }
-//     .single-education {
+//     .single-social {
 //         flex: 0 0 calc(50% - 20px);
 //         margin-right: 0;
 //         margin-left: 0;
@@ -91,23 +91,23 @@ a {
 //     }
 // }
 
-// //projects
+// //technicals
 
-// .single-project {
+// .single-technical {
 //     width: 100%;
 //     margin: 0 auto;
 //     box-shadow: 0 0 4px 1px gray;
 //     margin-bottom: 30px;
 // }
 
-// .single-project-img {
+// .single-technical-img {
 //     width: 100%;
 //     margin: 0 auto;
 //     height: 350px;
 //     align-items: center;
 // }
 
-// .single-project-img img {
+// .single-technical-img img {
 //     width: auto;
 //     height: 100%;
 //     display: block;
@@ -115,46 +115,46 @@ a {
 //     margin: 0 auto;
 // }
 
-// .single-project-info {
+// .single-technical-info {
 //     padding: 10px;
 //     min-width: 200px;
 // }
 
-// .single-project-info h3 {
+// .single-technical-info h3 {
 //     letter-spacing: 0.1rem;
 //     margin-bottom: 5px;
 //     color: $dark;
 // }
 
-// .single-project-info p {
+// .single-technical-info p {
 //     color: gray;
 //     font-size: 18px;
 // }
 
 // @media screen and (min-width: 860px) {
-//     .projects-center {
+//     .technicals-center {
 //         display: flex;
 //         flex-wrap: wrap;
 //         justify-content: space-between;
 //         max-width: 2000px;
 //         margin: 0 auto;
 //     }
-//     .single-project {
+//     .single-technical {
 //         display: flex;
 //         flex: 0 0 calc(49%);
 //         margin: 0 0;
 //         margin-bottom: 25px;
 //         position: relative;
 //     }
-//     .single-project-img {
+//     .single-technical-img {
 //         max-width: 400px;
 //     }
 
-//     .single-project-img img {
+//     .single-technical-img img {
 //         max-width: 400px;
 //         transition: all 0.3s ease-in-out;
 //     }
-//     .single-project:hover .single-project-img img {
+//     .single-technical:hover .single-technical-img img {
 //         transform: scale(1.025);
 //     }
 // }

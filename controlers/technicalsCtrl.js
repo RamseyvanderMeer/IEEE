@@ -1,55 +1,56 @@
-const projectSchema = require('../models/projectModel');
+const technicalSchema = require('../models/technicalModel');
 
 
-exports.getProject = async (req, res) => {
+exports.getTechnical = async (req, res) => {
     try {
-        const project = await projectSchema.find(req.body);
-        res.json(project);
+        const technical = await technicalSchema.find(req.body);
+        res.json(technical);
     } catch (error) {
         res.status(500).json({ msg: 'server problems' })
     }
 }
 
-exports.addProject = async (req, res) => {
+exports.addTechnical = async (req, res) => {
     const { title, product_id, date, description, images } = req.body;
 
     try {
-        const project = new projectSchema({
+        const technical = new technicalSchema({
             title, 
             product_id, 
             description, 
             date,
             images
         })
-        await project.save();
+        await technical.save();
         res.json({msg:"product added"});
     } catch (error) {
         res.status(500).json({ msg: 'server problems' })
     }
 }
 
-exports.getProjectID = async (req, res) => {
+exports.getTechnicalID = async (req, res) => {
     try {
-        const project = await projectSchema.findById(req.params.id)
-        res.json(project)
+        const technical = await technicalSchema.findById(req.params.id)
+        res.json(technical)
     } catch (error) {
         res.status(500).json({ msg: 'server problems' })
     }
 
 }
 
-exports.updateProject = async (req, res) => {
+exports.updateTechnical = async (req, res) => {
     const { title, product_id, description, images } = req.body;
 
     try {
-        const project = await projectSchema.findByIdAndUpdate(req.params.id, {
+        const technical = await technicalSchema.findByIdAndUpdate(req.params.id, {
             title, 
             product_id, 
-            description, 
+            description,
+            date, 
             images
         });
 
-        let results = project.save()
+        let results = technical.save()
         await results
         res.json({ msg: 'Items Updated' })
     } catch (error) {
@@ -57,11 +58,11 @@ exports.updateProject = async (req, res) => {
     }
 }
 
-exports.delProject = async (req, res) => {
+exports.delTechnical = async (req, res) => {
     try {
-        const project = await projectSchema.findByIdAndDelete(req.params.id);
+        const technical = await technicalSchema.findByIdAndDelete(req.params.id);
 
-        project;
+        technical;
     
         res.json({msg:"Item deleted"})
     } catch (error) {

@@ -6,8 +6,8 @@ export const DataContext = createContext();
 export const DataProvider = ({ children }) => {
     const [isLogin, setIsLogin] = useState(false);
     const [about, setAbout] = useState([]);
-    const [education, setEducation] = useState([]);
-    const [projects, setProjects] = useState([]);
+    const [social, setSocial] = useState([]);
+    const [technicals, setTechnicals] = useState([]);
     const [experience, setExperience] = useState([]);
     const [loginFin, setLoginFin] = useState(true);
     const [dataFin, setDataFin] = useState(true);
@@ -48,15 +48,15 @@ export const DataProvider = ({ children }) => {
         //console.log(res1.data);
         setAbout(res1.data);
 
-        // ...for fetchning education...
-        const res2 = await axios.get(`/education`);
+        // ...for fetchning social...
+        const res2 = await axios.get(`/Social`);
         // console.log(res2.data);
-        setEducation(res2.data);
+        setSocial(res2.data);
 
-        // ...for fetching projects
-        const res4 = await axios.get(`/project`);
+        // ...for fetching technicals
+        const res4 = await axios.get(`/technical`);
         // console.log(res4.data);
-        setProjects(res4.data);
+        setTechnicals(res4.data);
 
 
         // ...for fetchning experience...
@@ -75,8 +75,8 @@ export const DataProvider = ({ children }) => {
             return setDataFin(false)
 
             //    fetchAbout();
-            //    fetchEducation();
-            //    fetchProjects();
+            //    fetchSocial();
+            //    fetchTechnicals();
             //    fetchExperience();
 
         } catch (err) {
@@ -87,9 +87,9 @@ export const DataProvider = ({ children }) => {
 
     const state = {
         about: [about, setAbout],
-        education: [education, setEducation],
+        social: [social, setSocial],
         experience: [experience, setExperience],
-        projects: [projects, setProjects],
+        technicals: [technicals, setTechnicals],
         isLogin: [isLogin, setIsLogin]
 
     }

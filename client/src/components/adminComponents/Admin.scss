@@ -90,11 +90,11 @@ form button:hover {
     font-size: 18px;
 }
 
-.same-admin .single-education {
+.same-admin .single-social {
     margin-top: 10px;
 }
 
-.projects-admin .single-project {
+.technicals-admin .single-technical {
     margin-top: 10px;
 }
 
@@ -139,71 +139,71 @@ form button:hover {
     }
 }
 
-/* education admin */
+/* social admin */
 
 .same-admin {
     margin-bottom: 5px;
 }
 
-.same-admin .single-education p {
+.same-admin .single-social p {
     color: lightgray;
 }
 
-/* projects */
-.projects-admin .single-project-img {
+/* technicals */
+.technicals-admin .single-technical-img {
     width: 100%;
     height: 300px;
 }
 
-.projects-admin .single-project-img img {
+.technicals-admin .single-technical-img img {
     width: 100%;
     height: 100%;
 }
 
 @media screen and (min-width: 574px) {
-    .projects-admin .single-project-img {
+    .technicals-admin .single-technical-img {
         width: 100%;
         height: 350px;
     }
 
-    .projects-admin .single-project-img img {
+    .technicals-admin .single-technical-img img {
         width: 100%;
         height: 100%;
     }
 }
 
 @media screen and (min-width: 664px) {
-    .projects-admin .single-project {
+    .technicals-admin .single-technical {
         display: block;
     }
 
-    .projects-admin .single-project-img {
+    .technicals-admin .single-technical-img {
         width: 275px;
         height: 180px;
     }
 
-    .projects-admin .single-project-img img {
+    .technicals-admin .single-technical-img img {
         width: 100%;
         height: 100%;
     }
 
-    .single-project-info {
+    .single-technical-info {
         flex: 1;
     }
 }
 
 @media screen and (min-width: 664px) {
-    .projects-admin .single-project-img {
+    .technicals-admin .single-technical-img {
         width: 150px;
         height: 150px;
     }
 
-    .projects-admin .single-project-img img {
+    .technicals-admin .single-technical-img img {
         width: 150px;
         height: 100%;
     }
 
-    .projects-admin .single-project {
+    .technicals-admin .single-technical {
         display: flex;
         justify-content: space-between;
     }

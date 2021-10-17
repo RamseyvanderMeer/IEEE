@@ -1,7 +1,6 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
-const projectSchema = new mongoose.Schema({
-
+const socialSchema = new mongoose.Schema({
     product_id:{
         type:String,
         unique:true,
@@ -23,7 +22,6 @@ const projectSchema = new mongoose.Schema({
         type:Object,
         required:true
     }
-
 })
 
-module.exports = mongoose.model('projects', projectSchema)
+module.exports = mongoose.model('social', socialSchema);

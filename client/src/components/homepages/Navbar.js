@@ -19,8 +19,8 @@ const Navbar = () => {
     // for scrolling navbar elements
     const scrollToElement = (element) => {
         scroller.scrollTo(element, {
-            duration: 800,
-            delay: 50,
+            duration: 500,
+            delay: 10,
             smooth: true,
             offset: -80
         })
@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className="nav-container">
             <nav>
                 <div className="logoBtn">
-                    <Link to="/" onClick={() => scrollToElement('Home')}><img src={Logo} alt="" /></Link>
+                    <Link to="/" onClick={() => scrollToElement('about')}><img src={Logo} alt="" /></Link>
 
                     <div className="btn" onClick={actToggle}>
                         <div className={toggle ? "bar1 animateBar" : "bar bar1"}></div>
@@ -62,9 +62,9 @@ const Navbar = () => {
                     <ul className={toggle ? "new-links links" : "links"} onClick={closeNavbar}>
                         {/* <li onClick={() => scrollToElement('Home')}><Link to="/">Home</Link></li> */}
                         <li onClick={() => scrollToElement('About')}><Link to="/">About</Link></li>
-                        {/* <li onClick={() => scrollToElement('Education')}><Link to="/">Education</Link></li>
-                        <li onClick={() => scrollToElement('Experience')}><Link to="/">Events</Link></li> */}
-                        <li onClick={() => scrollToElement('Projects')}><Link to="/">Events</Link></li>
+                        <li onClick={() => scrollToElement('Social')}><Link to="/">Social</Link></li>
+                        {/* <li onClick={() => scrollToElement('Experience')}><Link to="/">Events</Link></li> */}
+                        <li onClick={() => scrollToElement('Technicals')}><Link to="/">Professional</Link></li>
                         <li onClick={() => scrollToElement('Contact')}><Link to="/">Contact</Link></li>
                         <li className={isLogin? '':'adminLi'}><Link to={isLogin?'/admin':'/'}>{isLogin?<div className="admin">Admin</div>:''}</Link></li>
                         <li onClick={logOutSubmit}> <Link to={isLogin?'/':'/login'}>{isLogin?"logout":"login"}</Link></li>

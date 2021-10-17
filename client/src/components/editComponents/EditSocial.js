@@ -5,9 +5,9 @@ import axios from 'axios'
 
 
 
-const EditEducation = (props) => {
+const EditSocial = (props) => {
 
-    const [education, setEducation] = useState('')
+    const [social, setSocial] = useState('')
     const [message, setMessage] = useState('')
     const history = useHistory()
 
@@ -15,9 +15,9 @@ const EditEducation = (props) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`/education/${props.match.params.id}`)
+                const res = await axios.get(`/social/${props.match.params.id}`)
                 // console.log(res.data)
-                setEducation(res.data.education)
+                setSocial(res.data.social)
             } catch (error) {
                 console.log(error)
             }
@@ -25,15 +25,15 @@ const EditEducation = (props) => {
         fetchData()
     }, [])
 
-    const onChangeEducation = (e) => {
-        setEducation(e.target.value)
-        console.log(education)
+    const onChangeSocial = (e) => {
+        setSocial(e.target.value)
+        console.log(social)
     }
 
-    const updateEducation = async (e) => {
+    const updateSocial = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.put(`/education/update/${props.match.params.id}`, { education })
+            const res = await axios.put(`/social/update/${props.match.params.id}`, { social })
             setMessage(`${res.data.msg}`)
         } catch (error) {
             console.log(error)
@@ -52,14 +52,14 @@ const EditEducation = (props) => {
                     <div className="same-form">
                         <form>
                             <h3 className="updated">{message}</h3>
-                            <h4>Education Component</h4>
-                            <label htmlfor="text">Education</label>
+                            <h4>Social Component</h4>
+                            <label htmlfor="text">Social</label>
                             <input
-                                value={education}
-                                onChange={onChangeEducation}
+                                value={social}
+                                onChange={onChangeSocial}
                                 type="text" />
                             <div className="btns">
-                                <button type="submit" onClick={updateEducation}>Update</button>
+                                <button type="submit" onClick={updateSocial}>Update</button>
                                 <Link to="/admin"><button className="cancel-btn">cancel</button></Link>
                             </div>
                         </form>
@@ -70,4 +70,4 @@ const EditEducation = (props) => {
     )
 }
 
-export default EditEducation
+export default EditSocial

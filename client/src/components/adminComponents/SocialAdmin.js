@@ -9,13 +9,13 @@ const initialState = {
     date: ''
 }
 
-const ProjectsAdmin = () => {
+const SocialsAdmin = () => {
 
-    const [product, setProducts] = useState(initialState)
+    const [social, setSocial] = useState(initialState)
     const [images, setImages] = useState(false)
     const [message, setMessage] = useState('')
     const [messageCond, setMessageCond] = useState(false)
-    const [projectData, setProjectData] = useState([])
+    const [socialData, setSocialData] = useState([])
 
 
     //upload
@@ -65,7 +65,7 @@ const ProjectsAdmin = () => {
 
         const { name, value } = e.target
 
-        setProducts({ ...product, [name]: value })
+        setSocial({ ...social, [name]: value })
         // console.log(product.description)
         // console.log(product.title)
         // console.log(product.product_id)
@@ -75,12 +75,12 @@ const ProjectsAdmin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.post('/project', { ...product, images })
+            const res = await axios.post('/social', { ...social, images })
             setMessage(res.data.msg)
             setTimeout(() => {
                 setMessage('')
             }, 2000)
-            setProducts(initialState)
+            setSocial(initialState)
             setImages(false)
         } catch (error) {
             console.log(error)
@@ -96,8 +96,8 @@ const ProjectsAdmin = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`/project`)
-                setProjectData(res.data)
+                const res = await axios.get(`/social`)
+                setSocialData(res.data)
                 console.log(res.data)
 
             } catch (error) {
@@ -108,15 +108,15 @@ const ProjectsAdmin = () => {
     }, [])
 
     //delete functionality
-    const deleteProject = async (id) => {
+    const deleteSocial = async (id) => {
         //delete from ui
-        const filterProject = projectData.filter(item => item._id !== id)
+        const filterSocial = socialData.filter(item => item._id !== id)
 
-        setProjectData(filterProject)
+        setSocialData(filterSocial)
 
         //delete from data base
         try {
-            const res = await axios.delete(`/project/${id}`)
+            const res = await axios.delete(`/social/${id}`)
             setMessageCond(true)
             setMessage(res.data.msg)
             setTimeout(() => {
@@ -133,13 +133,13 @@ const ProjectsAdmin = () => {
         <div className="same-component">
             <div className="same-form">
                 <form onSubmit={handleSubmit}>
-                    <h4> Projects component </h4>
+                    <h4> Social Event component </h4>
 
                     <label htmlFor="text">id</label>
                     <input type="text"
                         name="product_id"
                         id="product_id"
-                        value={product.product_id}
+                        value={social.product_id}
                         onChange={handleChangeInput}
                         required
                     />
@@ -148,7 +148,7 @@ const ProjectsAdmin = () => {
                     <input type="text"
                         name="title"
                         id="title"
-                        value={product.title}
+                        value={social.title}
                         onChange={handleChangeInput}
                         required
                     />
@@ -157,7 +157,7 @@ const ProjectsAdmin = () => {
                     <input type="text"
                         name="date"
                         id="date"
-                        value={product.date}
+                        value={social.date}
                         onChange={handleChangeInput}
                         required
                     />
@@ -165,7 +165,7 @@ const ProjectsAdmin = () => {
                     <label htmlFor="text">Description</label>
                     <textarea name="description"
                         id="description"
-                        value={product.description}
+                        value={social.description}
                         onChange={handleChangeInput}
                         required
                         cols="30"
@@ -181,7 +181,7 @@ const ProjectsAdmin = () => {
                             required
                         />
                         <div id="file_img" className="file_img" style={styleUpload}>
-                            <img src={images ? images.url : ''} alt="" />
+                            {/* <img src={images ? images.url : ''} alt="" /> */}
 
                             <span onClick={handleDestroy}><p>X</p></span>
                         </div>
@@ -194,18 +194,18 @@ const ProjectsAdmin = () => {
             </div>
             <div className="same-item">
                 <div className="about-info">
-                    {projectData.map((item) => (
-                        <div className="projects-admin" key={item._id}>
+                    {socialData.map((item) => (
+                        <div className="socials-admin" key={item._id}>
                             <div className="icons">
-                                <Link to={`/editProject/${item._id}`}><i className="fas fa-edit"></i></Link>
-                                <i className="fas fa-trash" onClick={() => deleteProject(item._id)}></i>
+                                <Link to={`/editSocial/${item._id}`}><i className="fas fa-edit"></i></Link>
+                                <i className="fas fa-trash" onClick={() => deleteSocial(item._id)}></i>
                             </div>
 
-                            <div className="single-project">
-                                <div className="single-project-img">
+                            <div className="single-social">
+                                <div className="single-social-img">
                                     <img src={item.images.url} alt="" />
                                 </div>
-                                <div className="single-project-info">
+                                <div className="single-social-info">
                                     <h3>{item.title}</h3>
                                     <p>{item.description}</p>
                                     <i>{item.date}</i>
@@ -220,4 +220,4 @@ const ProjectsAdmin = () => {
     )
 }
 
-export default ProjectsAdmin
+export default SocialsAdmin

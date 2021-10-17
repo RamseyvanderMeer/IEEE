@@ -37,9 +37,9 @@ mongoose.connect(URI, {
 app.use('/contact', require('./routes/contactRoute'))
 app.use('/user', require('./routes/userRoute'))
 app.use('/', require('./routes/aboutRoute'));
-app.use('/', require('./routes/educationRoute'));
+app.use('/', require('./routes/socialRoute'));
 app.use('/', require('./routes/experienceRoute'));
-app.use('/', require('./routes/projectRoute'));
+app.use('/', require('./routes/technicalRoute'));
 app.use('/', require('./routes/upload'));
 
 PORT = process.env.PORT || 5000;

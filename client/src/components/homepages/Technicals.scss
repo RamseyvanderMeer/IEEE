@@ -1,6 +1,6 @@
 @import "../../colors";
 
-.project-page {
+.technical-page {
     width: 100vw;
     background-color: $light;
     overflow: hidden;
@@ -16,8 +16,8 @@
     }
 }
 
-.projects {
-    &__single-project {
+.technicals {
+    &__single-technical {
         position: relative;
         width: 80%;
         height: 25em;

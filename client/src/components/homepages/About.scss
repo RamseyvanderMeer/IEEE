@@ -19,4 +19,22 @@
         width: 75vw;
         max-width: 1080px;
     }
+    &__button{
+        width: 5em;
+        height: 2em;
+        background-color: $lightest;
+        border-radius: 1em;
+        box-shadow: 1px 1px 2px 0px $darkish;
+        transition: 0.3s;
+        &__text{
+            text-align: center;
+            vertical-align: middle;
+            line-height: 2em;
+        }
+    }
+    &__button:hover{
+        background-color: $dark;
+        color: white;
+        box-shadow: 1px 1px 4px 0px $darkish;
+    }
 }

@@ -7,7 +7,8 @@ import "react-multi-carousel/lib/styles.css";
 const Social = () => {
 
     const state = useContext(DataContext)
-    const [social] = state.technicals
+    const [social] = state.social
+    console.log(social)
 
     const responsive = {
         superLargeDesktop: {

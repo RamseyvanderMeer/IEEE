@@ -5,7 +5,7 @@ import Navbar from './components/homepages/Navbar'
 import About from './components/homepages/About'
 import Social from './components/homepages/Social'
 import Technicals from './components/homepages/Technicals'
-import Board from './components/homepages/Board'
+import Board from './components/homepages/subpages/Board'
 import Contact from './components/homepages/Contact'
 import Footer from './components/homepages/Footer'
 import Login from './components/homepages/Login'
@@ -62,6 +62,7 @@ function App() {
       <Route exact path='/editBoard/:id' component={EditBoard} />
       <Route exact path='/editAbout/:id' component={EditAbout} />
       <Route exact path='/sign-up' component={SignUp} />
+      <Route exact path='/about' component={Board} />
 
 
       {/* <Route component={Footer} /> */}

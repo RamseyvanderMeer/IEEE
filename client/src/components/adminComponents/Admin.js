@@ -43,11 +43,11 @@ const Admin = () => {
                     <br />
 
 
-                    {/* <h4 className="admin-title">Board Component</h4>
+                    <h4 className="admin-title">Board Component</h4>
                     <BoardAdmin />
 
 
-                    <br /> */}
+                    <br />
                 </div>
             </div>
         </div>

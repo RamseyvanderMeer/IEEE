@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import '../../App.scss'
-import { DataContext } from '../Context/GlobalContext'
+import '../../../App.scss'
+import { DataContext } from '../../Context/GlobalContext'
 
 const Board = () => {
 

@@ -11,6 +11,8 @@ import Footer from './components/homepages/Footer'
 import Login from './components/homepages/Login'
 import Register from './components/homepages/Register'
 
+import SignUp from './components/homepages/subpages/SignUp'
+
 import Admin from './components/adminComponents/Admin'
 
 import EditAbout from './components/editComponents/EditAbout'
@@ -59,6 +61,7 @@ function App() {
       <Route exact path='/editTechnical/:id' component={EditTechnicals} />
       <Route exact path='/editBoard/:id' component={EditBoard} />
       <Route exact path='/editAbout/:id' component={EditAbout} />
+      <Route exact path='/sign-up' component={SignUp} />
 
 
       {/* <Route component={Footer} /> */}

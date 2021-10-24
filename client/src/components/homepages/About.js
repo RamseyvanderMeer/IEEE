@@ -20,11 +20,19 @@ const About = () => {
                     </p>
                 </div>
             ))}
-            <div class="about__button">
-                <div class="about__button__text">
-                    Board
+            <div className="about__button__spacing">
+                <div class="about__button">
+                    <div class="about__button__text">
+                        <a href="/about">Board</a>
+                    </div>
+                </div>
+                <div class="about__button">
+                    <div class="about__button__text">
+                        <a href="/sign-up">Sign up</a>
+                    </div>
                 </div>
             </div>
+
         </div>
     )
 }

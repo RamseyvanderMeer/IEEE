@@ -26,10 +26,18 @@
         border-radius: 1em;
         box-shadow: 1px 1px 2px 0px $darkish;
         transition: 0.3s;
+        margin: 1em;
         &__text{
             text-align: center;
             vertical-align: middle;
+            font-weight: 600;
             line-height: 2em;
+        }
+        &__spacing{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin: 1em;
         }
     }
     &__button:hover{

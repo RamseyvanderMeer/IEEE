@@ -6,6 +6,7 @@ const initialState = {
     product_id: '',
     title: '',
     description: '',
+    images: '',
     date: ''
 }
 

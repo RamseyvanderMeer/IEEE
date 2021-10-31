@@ -51,7 +51,7 @@ const Login = () => {
                     <div className="login-center">
                         <form onSubmit={loginSubmit}>
                             <p>{err}</p>
-                            <label htmlfor="email">Email</label>
+                            <label htmlFor="email">Email</label>
                             <input
                                 type="email"
                                 placeholder="input email..."
@@ -60,7 +60,7 @@ const Login = () => {
                                 onChange={onChangeInput}
                                 required
                             />
-                            <label htmlfor="password">Password</label>
+                            <label htmlFor="password">Password</label>
                             <input
                                 type="password"
                                 placeholder="input password..."

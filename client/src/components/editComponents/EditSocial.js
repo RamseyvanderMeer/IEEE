@@ -53,7 +53,7 @@ const EditSocial = (props) => {
                         <form>
                             <h3 className="updated">{message}</h3>
                             <h4>Social Component</h4>
-                            <label htmlfor="text">Social</label>
+                            <label htmlFor="text">Social</label>
                             <input
                                 value={social}
                                 onChange={onChangeSocial}

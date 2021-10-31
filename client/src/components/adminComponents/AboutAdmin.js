@@ -64,7 +64,7 @@ const AboutAdmin = () => {
             <div className="same-form">
                 <form onSubmit={handleSubmit}>
                     <h4>About Component</h4>
-                    <label htmlfor="text">About</label>
+                    <label htmlFor="text">About</label>
                     <textarea
                         value={about}
                         onChange={onChangeAbout}

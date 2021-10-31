@@ -60,21 +60,21 @@ const Contact = () => {
                     <div className="contact_form">
                         <form onSubmit={formSubmit}>
                             <p>{banner}</p>
-                            <label htmlfor="name">Name</label>
+                            <label htmlFor="name">Name</label>
                             <input
                                 value={name}
                                 onChange={handleNameChange}
                                 type="text"
                                 placeholder="input name..."
                                 required />
-                            <label htmlfor="email">Email</label>
+                            <label htmlFor="email">Email</label>
                             <input
                                 value={email}
                                 onChange={handleEmailChange}
                                 type="text"
                                 placeholder="input email..."
                                 required />
-                            <label htmlfor="message">message</label>
+                            <label htmlFor="message">message</label>
                             <textarea
                                 value={message}
                                 onChange={handleMessageChange}

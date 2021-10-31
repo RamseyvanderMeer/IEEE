@@ -149,6 +149,65 @@ form button:hover {
     color: lightgray;
 }
 
+.socials-admin .single-social-img {
+    width: 100%;
+    height: 300px;
+}
+
+socialls-admin .single-social-img img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 574px) {
+    .socials-admin .single-social-img {
+        width: 100%;
+        height: 350px;
+    }
+
+    .socials-admin .single-social-img img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: 664px) {
+    .socials-admin .single-social {
+        display: block;
+    }
+
+    .socials-admin .single-social-img {
+        width: 275px;
+        height: 180px;
+    }
+
+    .socials-admin .single-social-img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .single-social-info {
+        flex: 1;
+    }
+}
+
+@media screen and (min-width: 664px) {
+    .socials-admin .single-social-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .socials-admin .single-social-img img {
+        width: 150px;
+        height: 100%;
+    }
+
+    .socials-admin .single-social {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
 /* technicals */
 .technicals-admin .single-technical-img {
     width: 100%;

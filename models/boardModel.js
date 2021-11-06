@@ -10,7 +10,7 @@ const boardSchema = new mongoose.Schema({
         type:String,
         trim:true
     },
-    date:{
+    name:{
         type:String,
         required:true
     },

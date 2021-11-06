@@ -10,9 +10,9 @@ const initialState = {
     date: ''
 }
 
-const EditTechnicals = (props) => {
+const EditTechnical = (props) => {
 
-    const [product, setProducts] = useState(initialState)
+    const [technical, setTechnicals] = useState(initialState)
     const [images, setImages] = useState(false)
     const [message, setMessage] = useState('')
     const history = useHistory()
@@ -65,17 +65,17 @@ const EditTechnicals = (props) => {
 
         const { name, value } = e.target
 
-        setProducts({ ...product, [name]: value })
+        setTechnicals({ ...technical, [name]: value })
     }
 
     //getting data
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`/technical/${props.match.params.id}`)
-                setProducts({
+                const res = await axios.get(`/technicals/${props.match.params.id}`)
+                setTechnicals({
                     product_id: res.data.product_id,
-                    date: res.data.date,
+                    name: res.data.name,
                     title: res.data.title,
                     description: res.data.description
                 })
@@ -90,7 +90,7 @@ const EditTechnicals = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.put(`/technical/update/${props.match.params.id}`, { ...product, images })
+            const res = await axios.put(`/technicals/update/${props.match.params.id}`, { ...technical, images })
             setMessage(res.data.msg)
 
             setImages(false)
@@ -113,13 +113,13 @@ const EditTechnicals = (props) => {
                     <div className="same-form">
                         <form onSubmit={handleSubmit}>
                             <h3 className="updated">{message}</h3>
-                            <h4>Technicals components</h4>
+                            <h4>Technical components</h4>
                             <label htmlFor="text">Id</label>
                             <input
                                 type="text"
                                 name="product_id"
                                 required id="product_id"
-                                value={product.product_id}
+                                value={technical.product_id}
                                 onChange={handleChangeInput}
                             />
 
@@ -128,7 +128,7 @@ const EditTechnicals = (props) => {
                                 type="text"
                                 name="title"
                                 required
-                                value={product.title}
+                                value={technical.title}
                                 onChange={handleChangeInput}
                                 id="title" />
                             <label htmlFor="text">date</label>
@@ -136,14 +136,14 @@ const EditTechnicals = (props) => {
                                 type="text"
                                 name="date"
                                 required
-                                value={product.date}
+                                value={technical.date}
                                 onChange={handleChangeInput}
                                 id="date" />
 
                             <label htmlFor="text">Description</label>
                             <textarea type="text"
                                 name="description"
-                                value={product.description}
+                                value={technical.description}
                                 onChange={handleChangeInput}
                                 required id="description" cols="30" rows="3" />
 
@@ -173,4 +173,4 @@ const EditTechnicals = (props) => {
     )
 }
 
-export default EditTechnicals
+export default EditTechnical

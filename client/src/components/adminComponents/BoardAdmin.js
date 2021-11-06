@@ -7,7 +7,7 @@ const initialState = {
     title: '',
     description: '',
     images: '',
-    date: ''
+    name: ''
 }
 
 const BoardsAdmin = () => {
@@ -154,11 +154,11 @@ const BoardsAdmin = () => {
                         required
                     />
 
-                    <label htmlFor="text">Date</label>
+                    <label htmlFor="text">Name</label>
                     <input type="text"
-                        name="date"
-                        id="date"
-                        value={board.date}
+                        name="name"
+                        id="name"
+                        value={board.name}
                         onChange={handleChangeInput}
                         required
                     />
@@ -209,7 +209,7 @@ const BoardsAdmin = () => {
                                 <div className="single-social-info">
                                     <h3>{item.title}</h3>
                                     <p>{item.description}</p>
-                                    <i>{item.date}</i>
+                                    <i>{item.name}</i>
                                 </div>
                             </div>
                             <h3 className={messageCond ? "new-delete item-delete-tab" : "item-delete-tab"}>{message}</h3>

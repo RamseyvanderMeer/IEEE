@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import '../../../App.scss'
+import './Board.scss'
 import { DataContext } from '../../Context/GlobalContext'
 
 const Board = () => {
@@ -8,23 +9,18 @@ const Board = () => {
     const [board] = state.board
 
     return (
-        <div>
-            <div className="main-container">
-                <h2 className="title">
-                    Board
-                </h2>
-                <div className="board">
-                    <div className="board-center">
-                        {board.map((item) => (
-                            <div className="single-board" key={item._id}>
-                                <p>
-                                    {item.board}
-                                </p>
-                            </div>
-                        ))}
-
-                    </div>
-                </div>
+        <div className="board">
+            <h2 className="title">
+                Board
+            </h2>
+            <div className="board__container">
+                    {board.map((item) => (
+                        <div className="single-board" key={item._id}>
+                            <p>
+                                {item.title}
+                            </p>
+                        </div>
+                    ))}
             </div>
         </div>
     )

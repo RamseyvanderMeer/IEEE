@@ -13,14 +13,14 @@ exports.getBoard = async (req, res) => {
 
 //add user
 exports.addBoard = async (req, res) => {
-    const { title, product_id, date, description, images } = req.body;
+    const { title, product_id, name, description, images } = req.body;
 
     //first way async await
     try {
         const newBoard = new boardSchema({
             title, 
             product_id, 
-            date, 
+            name, 
             description, 
             images
         })
@@ -61,11 +61,11 @@ exports.getBoardID = async (req, res) => {
 //update user by id
 exports.updateBoard = async (req, res) => {
     try {
-        const { title, product_id, date, description, images } = req.body;
+        const { title, product_id, name, description, images } = req.body;
         const newBoard = await boardSchema.findByIdAndUpdate(req.params.id, {
             title, 
             product_id, 
-            date, 
+            name, 
             description, 
             images
         });

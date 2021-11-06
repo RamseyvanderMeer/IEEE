@@ -23,7 +23,7 @@ const About = () => {
             <div className="about__button__spacing">
                 <div class="about__button">
                     <div class="about__button__text">
-                        <a href="/about">Board</a>
+                        <a href="/board">Board</a>
                     </div>
                 </div>
                 <div class="about__button">

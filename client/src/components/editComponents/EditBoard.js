@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import {Link, useHistory} from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import './Edit.scss'
 import axios from 'axios'
 
 
-const EditBoard = (props) =>{
+
+const EditBoard = (props) => {
 
     const [board, setBoard] = useState('')
     const [message, setMessage] = useState('')
@@ -26,7 +27,7 @@ const EditBoard = (props) =>{
 
     const onChangeBoard = (e) => {
         setBoard(e.target.value)
-        // console.log(board)
+        console.log(board)
     }
 
     const updateBoard = async (e) => {
@@ -43,19 +44,20 @@ const EditBoard = (props) =>{
         }, 2000)
     }
 
-    return(
-<div className="edit">
+
+    return (
+        <div className="edit">
             <div className="main-container">
                 <div className="same-component">
                     <div className="same-form">
                         <form>
                             <h3 className="updated">{message}</h3>
                             <h4>Board Component</h4>
-                            <label htmlfor="text">Board</label>
-                            <input 
-                            value={board}
-                            onChange={onChangeBoard}
-                            type="text" />
+                            <label htmlFor="text">Board</label>
+                            <input
+                                value={board}
+                                onChange={onChangeBoard}
+                                type="text" />
                             <div className="btns">
                                 <button type="submit" onClick={updateBoard}>Update</button>
                                 <Link to="/admin"><button className="cancel-btn">cancel</button></Link>

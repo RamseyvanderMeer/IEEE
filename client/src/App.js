@@ -62,7 +62,7 @@ function App() {
       <Route exact path='/editBoard/:id' component={EditBoard} />
       <Route exact path='/editAbout/:id' component={EditAbout} />
       <Route exact path='/sign-up' component={SignUp} />
-      <Route exact path='/about' component={Board} />
+      <Route exact path='/board' component={Board} />
 
 
       {/* <Route component={Footer} /> */}

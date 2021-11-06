@@ -1,8 +1,25 @@
 const mongoose = require("mongoose");
 
 const boardSchema = new mongoose.Schema({
-    board:{
+    product_id:{
         type:String,
+        unique:true,
+        required:true
+    },
+    title:{
+        type:String,
+        trim:true
+    },
+    date:{
+        type:String,
+        required:true
+    },
+    description:{
+        type:String,
+        required:true
+    },
+    images:{
+        type:Object,
         required:true
     }
 })

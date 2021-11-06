@@ -182,7 +182,7 @@ const SocialsAdmin = () => {
                             required
                         />
                         <div id="file_img" className="file_img" style={styleUpload}>
-                            {/* <img src={images ? images.url : ''} alt="" /> */}
+                            <img src={images ? images.url : ''} alt="" />
 
                             <span onClick={handleDestroy}><p>X</p></span>
                         </div>

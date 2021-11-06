@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
+const initialState = {
+    about: ''
+}
+
 const AboutAdmin = () => {
 
     const [about, setAbout] = useState('')
@@ -32,7 +36,12 @@ const AboutAdmin = () => {
         e.preventDefault()
         // console.log('clicked')
         try {
-            await axios.post(`/about`, { about })
+            const res = await axios.post(`/about`, { about })
+            setMessage(res.data.msg)
+            setTimeout(() => {
+                setMessage('')
+            }, 2000)
+            setAbout('')
             // setAboutData([...aboutData,{about}])
         } catch (error) {
             console.log(error)

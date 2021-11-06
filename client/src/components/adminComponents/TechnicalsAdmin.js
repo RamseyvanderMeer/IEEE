@@ -6,12 +6,13 @@ const initialState = {
     product_id: '',
     title: '',
     description: '',
+    images: '',
     date: ''
 }
 
 const TechnicalsAdmin = () => {
 
-    const [product, setProducts] = useState(initialState)
+    const [technical, setTechnical] = useState(initialState)
     const [images, setImages] = useState(false)
     const [message, setMessage] = useState('')
     const [messageCond, setMessageCond] = useState(false)
@@ -65,7 +66,7 @@ const TechnicalsAdmin = () => {
 
         const { name, value } = e.target
 
-        setProducts({ ...product, [name]: value })
+        setTechnical({ ...technical, [name]: value })
         // console.log(product.description)
         // console.log(product.title)
         // console.log(product.product_id)
@@ -75,12 +76,12 @@ const TechnicalsAdmin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.post('/technical', { ...product, images })
+            const res = await axios.post('/technical', { ...technical, images })
             setMessage(res.data.msg)
             setTimeout(() => {
                 setMessage('')
             }, 2000)
-            setProducts(initialState)
+            setTechnical(initialState)
             setImages(false)
         } catch (error) {
             console.log(error)
@@ -133,13 +134,13 @@ const TechnicalsAdmin = () => {
         <div className="same-component">
             <div className="same-form">
                 <form onSubmit={handleSubmit}>
-                    <h4> Technical Events component </h4>
+                    <h4> Technical Event component </h4>
 
                     <label htmlFor="text">id</label>
                     <input type="text"
                         name="product_id"
                         id="product_id"
-                        value={product.product_id}
+                        value={technical.product_id}
                         onChange={handleChangeInput}
                         required
                     />
@@ -148,7 +149,7 @@ const TechnicalsAdmin = () => {
                     <input type="text"
                         name="title"
                         id="title"
-                        value={product.title}
+                        value={technical.title}
                         onChange={handleChangeInput}
                         required
                     />
@@ -157,7 +158,7 @@ const TechnicalsAdmin = () => {
                     <input type="text"
                         name="date"
                         id="date"
-                        value={product.date}
+                        value={technical.date}
                         onChange={handleChangeInput}
                         required
                     />
@@ -165,7 +166,7 @@ const TechnicalsAdmin = () => {
                     <label htmlFor="text">Description</label>
                     <textarea name="description"
                         id="description"
-                        value={product.description}
+                        value={technical.description}
                         onChange={handleChangeInput}
                         required
                         cols="30"

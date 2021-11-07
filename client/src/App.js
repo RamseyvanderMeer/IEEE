@@ -12,6 +12,7 @@ import Login from './components/homepages/Login'
 import Register from './components/homepages/Register'
 
 import SignUp from './components/homepages/subpages/SignUp'
+import Calendar from './components/homepages/subpages/Calendar'
 
 import Admin from './components/adminComponents/Admin'
 
@@ -63,6 +64,7 @@ function App() {
       <Route exact path='/editAbout/:id' component={EditAbout} />
       <Route exact path='/sign-up' component={SignUp} />
       <Route exact path='/board' component={Board} />
+      <Route exact path='/calendar' component={Calendar} />
 
 
       {/* <Route component={Footer} /> */}

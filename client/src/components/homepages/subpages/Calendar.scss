@@ -1,0 +1,10 @@
+@import "../../../colors";
+
+.calendar{
+    width: 100vw;
+    min-height: $pageHeight;
+    background-color: $light;
+    &__container{
+        background-color: $dark;
+    }
+}

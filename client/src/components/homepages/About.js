@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import './About.scss'
 import { DataContext } from '../Context/GlobalContext'
 import alma from '../../images/AlmaVector.svg'
+import { Link } from 'react-router-dom'
 
 const About = () => {
 
@@ -27,16 +28,16 @@ const About = () => {
                         </div>
                     ))}
                     <div className="about__button__spacing">
-                        <div className="about__button">
+                        <Link to='/board' className="about__button">
                             <div className="about__button__text">
-                                <a href="/board">Board</a>
+                                <a>Board</a>
                             </div>
-                        </div>
-                        <div className="about__button">
+                        </Link>
+                        <Link to='/sign-up' className="about__button">
                             <div className="about__button__text">
-                                <a href="/sign-up">Sign up</a>
+                                <a>Join</a>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </div>

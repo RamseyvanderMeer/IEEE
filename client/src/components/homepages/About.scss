@@ -21,7 +21,7 @@
             transform: translate(0, -50%);
             max-height: 90vh;
             max-width: 95vw;
-            opacity: 0.4;
+            opacity: 0.5;
             z-index: 0;
         }
     }
@@ -58,11 +58,13 @@
         box-shadow: 1px 1px 2px 0px $darkish;
         transition: 0.3s;
         margin: 1em;
+        color: black;
         &__text {
             text-align: center;
             vertical-align: middle;
             font-weight: 600;
             line-height: 2em;
+            
         }
         &__spacing {
             display: flex;
@@ -87,8 +89,7 @@
                 // transform: translate(0, -80%);
             }
         }
-        &__text{
-            
+        &__text {
         }
     }
 }

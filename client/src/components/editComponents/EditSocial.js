@@ -138,7 +138,7 @@ const EditSocial = (props) => {
                                 required
                                 value={social.date}
                                 onChange={handleChangeInput}
-                                id="name" />
+                                id="date" />
 
                             <label htmlFor="text">Description</label>
                             <textarea type="text"

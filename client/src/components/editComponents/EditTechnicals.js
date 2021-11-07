@@ -72,10 +72,10 @@ const EditTechnical = (props) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`/technicals/${props.match.params.id}`)
+                const res = await axios.get(`/technical/${props.match.params.id}`)
                 setTechnicals({
                     product_id: res.data.product_id,
-                    name: res.data.name,
+                    date: res.data.date,
                     title: res.data.title,
                     description: res.data.description
                 })
@@ -90,7 +90,7 @@ const EditTechnical = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.put(`/technicals/update/${props.match.params.id}`, { ...technical, images })
+            const res = await axios.put(`/technical/update/${props.match.params.id}`, { ...technical, images })
             setMessage(res.data.msg)
 
             setImages(false)
@@ -99,7 +99,7 @@ const EditTechnical = (props) => {
         }
         setTimeout(() => {
             history.push('/admin')
-        }, 2000)
+        }, 5000)
     }
 
     const styleUpload = {

@@ -10,14 +10,14 @@ const Board = () => {
 
     return (
         <div className="board">
-            <div class="board__container">
+            <div className="board__container">
                 <h2 className="board__title">
                     Board
                 </h2>
                 <div className="board__person">
                     {board.map((item) => (
                         <div key={item._id}>
-                            <div class="board__person__card">
+                            <div className="board__person__card">
                                 <div className="board__person__card__image">
                                     <img className="board__person__card__img" src={item.images.url} alt="" />
                                 </div>

@@ -1,25 +1,56 @@
 @import "../../colors";
 
-.about{
+.about {
     background-color: $light;
     position: relative;
     width: 100vw;
-    height: $pageHeight;
+    min-height: $pageHeight;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    &__title{
+    opacity: 1;
+
+    &__container {
+        position: relative;
+        border-style: solid;
+        padding: 0 1em;
+
+        &__alma {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            max-height: 90vh;
+            max-width: 95vw;
+            opacity: 0.4;
+            z-index: 0;
+        }
+    }
+    &__image {
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+    }
+    &__content {
+        z-index: 5;
+        opacity: 0.9999999;
+        background-color: $light;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    &__title {
         font-size: 5em;
         padding: 35px;
         color: $lightest;
         font-weight: bold;
+        text-align: center;
     }
-    &__text{
+    &__text {
         width: 75vw;
         max-width: 1080px;
     }
-    &__button{
+    &__button {
         width: 5em;
         height: 2em;
         background-color: $lightest;
@@ -27,22 +58,37 @@
         box-shadow: 1px 1px 2px 0px $darkish;
         transition: 0.3s;
         margin: 1em;
-        &__text{
+        &__text {
             text-align: center;
             vertical-align: middle;
             font-weight: 600;
             line-height: 2em;
         }
-        &__spacing{
+        &__spacing {
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
             margin: 1em;
         }
     }
-    &__button:hover{
+    &__button:hover {
         background-color: $dark;
         color: white;
         box-shadow: 1px 1px 4px 0px $darkish;
+    }
+}
+@media screen and (max-width: 850px) {
+    .about {
+        &__container {
+            border-style: none;
+            &__alma {
+                display: none;
+                // top: 25%;
+                // transform: translate(0, -80%);
+            }
+        }
+        &__text{
+            
+        }
     }
 }

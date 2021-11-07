@@ -32,10 +32,10 @@ const Social = () => {
 
     return (
         <div className="social-page">
-            <div class="social-page__title">
+            <div className="social-page__title">
                 IEEE Social Events
             </div>
-            <div class="social">
+            <div className="social">
                 <Carousel
                     swipeable={true}
                     draggable={true}

@@ -31,10 +31,10 @@ const Technicals = () => {
 
     return (
         <div className="technical-page">
-            <div class="technical-page__title">
+            <div className="technical-page__title">
                 IEEE Professional Events
             </div>
-            <div class="technicals">
+            <div className="technicals">
                 <Carousel
                     swipeable={true}
                     draggable={true}

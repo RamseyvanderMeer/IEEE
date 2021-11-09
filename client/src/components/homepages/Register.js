@@ -53,7 +53,7 @@ const registerSubmit = async (e)=>{
     return (
         <div className="login">
           <div className="main-container">
-              <h3>Register for admin</h3></div>  
+              <h3>Register new admin</h3></div>  
               <div className="login-center">
          <form onSubmit={registerSubmit}>
              <p>{err}</p>
@@ -87,7 +87,7 @@ const registerSubmit = async (e)=>{
 
          <div className="login-btn">
              <button type="submit">Register</button>
-             <Link to="/login"><button >Login</button></Link>
+             {/* <Link to="/login"><button >Login</button></Link> */}
              <Link to="/"><button >Home</button></Link>
          </div>
 

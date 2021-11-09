@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './Contact.scss'
-import Profile from '../../images/mess.jpg'
 import axios from 'axios'
 import Load from '../../images/load2.gif'
 

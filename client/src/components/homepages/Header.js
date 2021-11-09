@@ -1,10 +1,6 @@
 import React from 'react'
 import './Header.scss'
 
-import Profile from '../../images/ramsey.jpg'
-import Particles from 'react-particles-js'
-import Typewriter from 'typewriter-effect'
-
 const Header = () => {
     return (
         <React.Fragment>

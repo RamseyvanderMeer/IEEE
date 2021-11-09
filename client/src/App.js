@@ -56,7 +56,7 @@ function App() {
 
 
       <Route exact path='/login' render={() => isLogin ? <Admin /> : <Login setIsLogin={setIsLogin} />} />
-      <Route exact path='/register' render={() => isLogin ? '' : <Register />} />
+      <Route exact path='/register' render={() => isLogin ? <Register /> : <Login />} />
       <Route exact path='/admin' {...console.log(isLogin)} render={() => isLogin ? <Admin /> : <Login />} />
       <Route exact path='/editSocial/:id' component={EditSocial} />
       <Route exact path='/editTechnical/:id' component={EditTechnicals} />

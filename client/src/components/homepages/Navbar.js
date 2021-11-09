@@ -67,6 +67,7 @@ const Navbar = () => {
                         <li onClick={() => scrollToElement('Technicals')}><Link to="/">Professional</Link></li>
                         <li onClick={() => scrollToElement('Contact')}><Link to="/">Contact</Link></li>
                         <li className={isLogin? '':'adminLi'}><Link to={isLogin?'/admin':'/'}>{isLogin?<div className="admin">Admin</div>:''}</Link></li>
+                        <li className={isLogin? '':'adminLi'}><Link to={isLogin?'/register':'/'}>{isLogin?<div className="admin">Register</div>:''}</Link></li>
                         <li onClick={logOutSubmit}> <Link to={isLogin?'/':'/login'}>{isLogin?"logout":"login"}</Link></li>
                     </ul>
                 </div>

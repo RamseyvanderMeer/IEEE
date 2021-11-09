@@ -90,9 +90,6 @@ const registerSubmit = async (e)=>{
              {/* <Link to="/login"><button >Login</button></Link> */}
              <Link to="/"><button >Home</button></Link>
          </div>
-
-
-                
          </form>
         </div>
     </div>

@@ -1,5 +1,5 @@
 import './App.scss';
-import React, { useCallback, useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import Navbar from './components/homepages/Navbar'
 import About from './components/homepages/About'
 import Social from './components/homepages/Social'
@@ -34,17 +34,17 @@ function App() {
   return (
     <div className="area">
       <ul className="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-            </ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
       <div className="App">
         <Navbar />
         <FadeIn direction={'down'}>

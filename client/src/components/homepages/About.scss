@@ -35,9 +35,7 @@
         z-index: 5;
         opacity: 0.9999999;
         background-color: $light;
-        box-shadow:
-    inset 10px 0 120px rgba(0, 0, 0, .1),
-    inset -10px 0 120px rgba(0, 0, 0, .1);
+        box-shadow: inset 10px 0 120px rgba(0, 0, 0, 0.1), inset -10px 0 120px rgba(0, 0, 0, 0.1);
         display: flex;
         align-items: center;
         justify-content: center;

@@ -32,42 +32,56 @@ function App() {
 
 
   return (
-    <div className="App">
-      <Navbar />
-      <FadeIn direction={'down'}>
-        <Element className='About'>
-          <Route exact path='/' component={About} />
-        </Element>
-      </FadeIn>
-      <FadeIn direction={'left'}>
-        <Element className='Social'>
-          <Route exact path='/' component={Social} />
-        </Element>
-      </FadeIn>
-      <FadeIn direction={'right'}>
-        <Element className='Technicals'>
-          <Route exact path='/' component={Technicals} />
-        </Element>
-      </FadeIn>
-      <FadeIn direction={'left'}>
-        <Element className='Contact'>
-          <Route exact path='/' component={Contact} />
-        </Element>
-      </FadeIn>
+    <div className="area">
+      <ul className="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+      <div className="App">
+        <Navbar />
+        <FadeIn direction={'down'}>
+          <Element className='About'>
+            <Route exact path='/' component={About} />
+          </Element>
+        </FadeIn>
+        <FadeIn direction={'left'}>
+          <Element className='Social'>
+            <Route exact path='/' component={Social} />
+          </Element>
+        </FadeIn>
+        <FadeIn direction={'right'}>
+          <Element className='Technicals'>
+            <Route exact path='/' component={Technicals} />
+          </Element>
+        </FadeIn>
+        <FadeIn direction={'left'}>
+          <Element className='Contact'>
+            <Route exact path='/' component={Contact} />
+          </Element>
+        </FadeIn>
 
-      <Route exact path='/login' render={() => isLogin ? <Admin /> : <Login setIsLogin={setIsLogin} />} />
-      <Route exact path='/register' render={() => isLogin ? <Register /> : <Login />} />
-      <Route exact path='/admin' {...console.log(isLogin)} render={() => isLogin ? <Admin /> : <Login />} />
-      <Route exact path='/editSocial/:id' component={EditSocial} />
-      <Route exact path='/editTechnical/:id' component={EditTechnicals} />
-      <Route exact path='/editBoard/:id' component={EditBoard} />
-      <Route exact path='/editAbout/:id' component={EditAbout} />
-      <Route exact path='/sign-up' component={SignUp} />
-      <Route exact path='/board' component={Board} />
-      <Route exact path='/calendar' component={Calendar} />
+        <Route exact path='/login' render={() => isLogin ? <Admin /> : <Login setIsLogin={setIsLogin} />} />
+        <Route exact path='/register' render={() => isLogin ? <Register /> : <Login />} />
+        <Route exact path='/admin' {...console.log(isLogin)} render={() => isLogin ? <Admin /> : <Login />} />
+        <Route exact path='/editSocial/:id' component={EditSocial} />
+        <Route exact path='/editTechnical/:id' component={EditTechnicals} />
+        <Route exact path='/editBoard/:id' component={EditBoard} />
+        <Route exact path='/editAbout/:id' component={EditAbout} />
+        <Route exact path='/sign-up' component={SignUp} />
+        <Route exact path='/board' component={Board} />
+        <Route exact path='/calendar' component={Calendar} />
 
 
-      <Route component={Footer} />
+        <Route component={Footer} />
+      </div>
     </div>
   );
 }

@@ -55,6 +55,7 @@ const Social = () => {
                                 <div className="events__single-event__info">
                                     <div className="events__single-event__img">
                                         <img src={item.images.url} alt="" />
+                                        <div className="events__overlay" />
                                     </div>
                                     <div class="events__single-event__info__content">
                                         <h3 className="events__single-event__info__content__title">

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import './Technicals.scss'
+import './Events.scss'
 import { DataContext } from '../Context/GlobalContext'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -30,37 +30,48 @@ const Technicals = () => {
     };
 
     return (
-        <div className="technical-page">
-            <div className="technical-page__title">
-                IEEE Professional Events
-            </div>
-            <div className="technicals">
-                <Carousel
-                    swipeable={true}
-                    draggable={true}
-                    responsive={responsive}
-                    customTransition="transform 300ms ease-in-out"
-                    transitionDuration={300}
+        <div className="event-page">
+            <div class="events-container">
+                <div className="event-page__title">
+                    Technical Events
+                </div>
+                <div className="events">
+                    <Carousel
+                        swipeable={true}
+                        draggable={true}
+                        responsive={responsive}
+                        customTransition="transform 400ms ease-in-out"
+                        transitionDuration={300}
+                        infinite={true}
+                        minimumTouchDrag={50}
+                        autoPlay={true}
+                    // showDots={true}
+                    // renderDotsOutside={true}
+
                     >
-                    {technicals.map((item) => (
-                        <div className="technicals__single-technical" key={item._id}>
-                            <div className="technicals__single-technical__info">
-                                <h3 className="technicals__single-technical__info__title">
-                                    {item.title}
-                                </h3>
-                                <p className="technicals__single-technical__info__date">
-                                    {item.date}
-                                </p>
-                                <div className="technicals__single-technical__img">
-                                    <img src={item.images.url} alt="" />
+                        {technicals.map((item) => (
+                            <div className="events__single-event" key={item._id}>
+                                <div className="events__single-event__info">
+                                    <div className="events__single-event__img">
+                                        <img src={item.images.url} alt="" />
+                                    </div>
+                                    <div class="events__single-event__info__content">
+                                        <h3 className="events__single-event__info__content__title">
+                                            {item.title}
+                                        </h3>
+                                        <p className="events__single-event__info__content__date">
+                                            {item.date}
+                                        </p>
+
+                                        <p className="events__single-event__info__content__description">
+                                            {item.description}
+                                        </p>
+                                    </div>
                                 </div>
-                                <p className="technicals__single-technical__info__description">
-                                    {item.description}
-                                </p>
                             </div>
-                        </div>
-                    ))}
-                </Carousel>
+                        ))}
+                    </Carousel>
+                </div>
             </div>
 
         </div>

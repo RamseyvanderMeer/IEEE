@@ -1,13 +1,11 @@
 import './App.scss';
 import React, { useCallback, useContext, useState } from 'react'
-import Header from './components/homepages/Header'
 import Navbar from './components/homepages/Navbar'
 import About from './components/homepages/About'
 import Social from './components/homepages/Social'
 import Technicals from './components/homepages/Technicals'
 import Board from './components/homepages/subpages/Board'
 import Contact from './components/homepages/Contact'
-import Footer from './components/homepages/Footer'
 import Login from './components/homepages/Login'
 import Register from './components/homepages/Register'
 
@@ -24,7 +22,7 @@ import EditBoard from './components/editComponents/EditBoard'
 import { Route } from 'react-router-dom'
 import { Element } from 'react-scroll'
 import { DataContext } from './components/Context/GlobalContext'
-
+import FadeIn from './FadeIn';
 
 function App() {
 
@@ -32,28 +30,29 @@ function App() {
   const [isLogin, setIsLogin] = state.isLogin
 
 
-  return (  
+  return (
     <div className="App">
       <Navbar />
-      {/* <Element className='Home'>
-        <Route exact path='/' component={Header} />
-      </Element> */}
-      <Element className='About'>
-        <Route exact path='/' component={About} />
-      </Element>
-      <Element className='Social'>
-        <Route exact path='/' component={Social} />
-      </Element>
-      <Element className='Technicals'>
-        <Route exact path='/' component={Technicals} />
-      </Element>
-      {/* <Element className='Board'>
-        <Route exact path='/' component={Board} />
-      </Element> */}
-      <Element className='Contact'>
-        <Route exact path='/' component={Contact} />
-      </Element>
-
+      <FadeIn direction={'down'}>
+        <Element className='About'>
+          <Route exact path='/' component={About} />
+        </Element>
+      </FadeIn>
+      <FadeIn direction={'left'}>
+        <Element className='Social'>
+          <Route exact path='/' component={Social} />
+        </Element>
+      </FadeIn>
+      <FadeIn direction={'right'}>
+        <Element className='Technicals'>
+          <Route exact path='/' component={Technicals} />
+        </Element>
+      </FadeIn>
+      <FadeIn direction={'left'}>
+        <Element className='Contact'>
+          <Route exact path='/' component={Contact} />
+        </Element>
+      </FadeIn>
 
       <Route exact path='/login' render={() => isLogin ? <Admin /> : <Login setIsLogin={setIsLogin} />} />
       <Route exact path='/register' render={() => isLogin ? <Register /> : <Login />} />

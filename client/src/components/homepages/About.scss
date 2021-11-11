@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     opacity: 1;
-
+    margin-bottom: 1em;
     &__container {
         position: relative;
         border-style: solid;
@@ -45,6 +45,7 @@
         color: $lightest;
         font-weight: bold;
         text-align: center;
+        text-shadow: 0.6px 0.6px 2px $dark;
     }
     &__text {
         width: 75vw;

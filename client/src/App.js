@@ -8,6 +8,7 @@ import Board from './components/homepages/subpages/Board'
 import Contact from './components/homepages/Contact'
 import Login from './components/homepages/Login'
 import Register from './components/homepages/Register'
+import Footer from './components/homepages/Footer'
 
 import SignUp from './components/homepages/subpages/SignUp'
 import Calendar from './components/homepages/subpages/Calendar'
@@ -66,7 +67,7 @@ function App() {
       <Route exact path='/calendar' component={Calendar} />
 
 
-      {/* <Route component={Footer} /> */}
+      <Route component={Footer} />
     </div>
   );
 }

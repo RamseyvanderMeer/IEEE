@@ -5,7 +5,6 @@
     // flex-direction: column;
     // justify-content: center;
     // align-items: center;
-    background-color: $light;
     min-height: $pageHeight;
     &__body {
         position: relative;
@@ -18,7 +17,6 @@
         &__grainger {
             margin: 1em;
             flex: 45%;
-            background-color: $light;
             &__title {
                 font-size: 1.5em;
                 padding: .5em;
@@ -35,7 +33,6 @@
         &__nongrainger {
             margin: 1em;
             flex: 45%;
-            background-color: $light;
             &__title {
                 font-size: 1.5em;
                 padding: .5em;

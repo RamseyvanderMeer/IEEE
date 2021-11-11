@@ -1,7 +1,6 @@
 @import "../../colors";
 
 .about {
-    background-color: $light;
     position: relative;
     width: 100vw;
     min-height: $pageHeight;
@@ -9,11 +8,11 @@
     align-items: center;
     justify-content: center;
     opacity: 1;
-    margin-bottom: 1em;
+    margin-bottom: 5em;
     &__container {
         position: relative;
         border-style: solid;
-        padding: 0 1em;
+        border-radius: 1em;
 
         &__alma {
             position: absolute;
@@ -31,6 +30,8 @@
         justify-content: center;
     }
     &__content {
+        padding: 0 1em;
+        border-radius: .9em;
         z-index: 5;
         opacity: 0.9999999;
         background-color: $light;
@@ -89,6 +90,9 @@
                 // top: 25%;
                 // transform: translate(0, -80%);
             }
+        }
+        &__content{
+            background-color: rgba(0,0,0,0);
         }
         &__text {
         }

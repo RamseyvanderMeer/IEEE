@@ -5,4 +5,4 @@ $lightish:#0A6AA6;
 $light:#ABDBFF;
 $lightest:#E86D0A;
 $navBarHeight: 3.5em;
-$pageHeight: calc(100vh - #{$navBarHeight});
+$pageHeight: calc(100vh - #{$navBarHeight} - 1em);

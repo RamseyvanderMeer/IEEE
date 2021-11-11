@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { scroller } from "react-scroll"
-import '../../App.scss'
+import './Footer.scss'
 
 const Footer = () => {
 
@@ -19,15 +19,13 @@ const Footer = () => {
         <React.Fragment>
 
             <div className="main-contact">
-                <div className="contact">
+                {/* <div className="contact">
                     <div className="contact-center">
                         <div className="contact-center-links">
                             <h3>Links</h3>
                             <div className="contact-links">
-                                <li><Link to='/' onClick={() => scrollToElement('Home')}>Home</Link></li>
                                 <li><Link to='/' onClick={() => scrollToElement('About')}>About</Link></li>
                                 <li><Link to='/' onClick={() => scrollToElement('Social')}>Social</Link></li>
-                                <li><Link to='/' onClick={() => scrollToElement('Exprience')}>Board</Link></li>
                                 <li><Link to='/' onClick={() => scrollToElement('Technicals')}>Technicals</Link></li>
                                 <li><Link to='/' onClick={() => scrollToElement('Contact')}>Contact</Link></li>
                                 <li><Link className="admin" to='/'>Admin</Link></li>
@@ -54,10 +52,10 @@ const Footer = () => {
 
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="footer">
-                    <p>Designed and Created by Ramsey 2021</p>
+                    <p>IEEE UIUC Branch 2021</p>
                 </div>
 
             </div>

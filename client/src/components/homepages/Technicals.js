@@ -24,7 +24,7 @@ const Technicals = () => {
             items: 2
         },
         mobile: {
-            breakpoint: { max: 464, min: 0 },
+            breakpoint: { max: 620, min: 0 },
             items: 1
         }
     };
@@ -45,6 +45,7 @@ const Technicals = () => {
                         infinite={true}
                         minimumTouchDrag={50}
                         autoPlay={true}
+                        overflow={true}
                     // showDots={true}
                     // renderDotsOutside={true}
 

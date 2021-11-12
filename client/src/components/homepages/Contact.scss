@@ -1,12 +1,12 @@
 @import "../../colors";
 
 .title{
-    color: $lightest;
+    color: white;
     text-align: center;
-    font-size: 3em;
+    font-size: 5em;
     position: relative;
     font-weight: 700;
-    text-shadow: 0.6px 0.6px 2px $dark;
+    // text-shadow: 0.6px 0.6px 2px $dark;
 }
 
 .main-container{

@@ -19,7 +19,7 @@ const Navbar = () => {
     // for scrolling navbar elements
     const scrollToElement = (element) => {
         scroller.scrollTo(element, {
-            duration: 500,
+            duration: 750,
             delay: 10,
             smooth: true,
             offset: -80
@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className="nav-container">
             <nav>
                 <div className="logoBtn">
-                    <Link to="/" onClick={() => scrollToElement('about')}><img src={Logo} alt="" /></Link>
+                    <Link to="/" onClick={() => scrollToElement('Landing')}><img src={Logo} alt="" /></Link>
 
                     <div className="btn" onClick={actToggle}>
                         <div className={toggle ? "bar1 animateBar" : "bar bar1"}></div>
@@ -61,7 +61,7 @@ const Navbar = () => {
                 <div className="links-container">
                     <ul className={toggle ? "new-links links" : "links"} onClick={closeNavbar}>
                         {/* <li onClick={() => scrollToElement('Home')}><Link to="/">Home</Link></li> */}
-                        <li onClick={() => scrollToElement('About')}><Link to="/">About</Link></li>
+                        <li onClick={() => scrollToElement('Landing')}><Link to="/">Home</Link></li>
                         <li onClick={() => scrollToElement('Social')}><Link to="/">Social</Link></li>
                         {/* <li onClick={() => scrollToElement('Board')}><Link to="/">Events</Link></li> */}
                         <li onClick={() => scrollToElement('Technicals')}><Link to="/">Professional</Link></li>

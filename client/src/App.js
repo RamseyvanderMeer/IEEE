@@ -9,6 +9,7 @@ import Contact from './components/homepages/Contact'
 import Login from './components/homepages/Login'
 import Register from './components/homepages/Register'
 import Footer from './components/homepages/Footer'
+import Landing from './components/homepages/Landing';
 
 import SignUp from './components/homepages/subpages/SignUp'
 import Calendar from './components/homepages/subpages/Calendar'
@@ -48,8 +49,8 @@ function App() {
       <div className="App">
         <Navbar />
         <FadeIn direction={'down'}>
-          <Element className='About'>
-            <Route exact path='/' component={About} />
+          <Element className='Landing'>
+            <Route exact path='/' component={Landing} />
           </Element>
         </FadeIn>
         <FadeIn direction={'left'}>
@@ -78,6 +79,8 @@ function App() {
         <Route exact path='/sign-up' component={SignUp} />
         <Route exact path='/board' component={Board} />
         <Route exact path='/calendar' component={Calendar} />
+        <Route exact path='/about' component={About} />
+        <Route exact path='/about' component={Board} />
 
 
         <Route component={Footer} />

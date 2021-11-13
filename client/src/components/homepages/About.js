@@ -28,11 +28,11 @@ const About = () => {
                         </div>
                     ))}
                     <div className="about__button__spacing">
-                        <Link to='/board' className="about__button">
+                        {/* <Link to='/board' className="about__button">
                             <div className="about__button__text">
                                 <a>Board</a>
                             </div>
-                        </Link>
+                        </Link> */}
                         <Link to='/sign-up' className="about__button">
                             <div className="about__button__text">
                                 <a>Join</a>

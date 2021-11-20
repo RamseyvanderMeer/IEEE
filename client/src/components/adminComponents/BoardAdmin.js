@@ -76,7 +76,7 @@ const BoardsAdmin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.post('/board', { ...board, images })
+            const res = await axios.post('/fetchboard', { ...board, images })
             setMessage(res.data.msg)
             setTimeout(() => {
                 setMessage('')
@@ -97,7 +97,7 @@ const BoardsAdmin = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`/board`)
+                const res = await axios.get(`/fetchboard`)
                 setBoardData(res.data)
                 console.log(res.data)
 
@@ -117,7 +117,7 @@ const BoardsAdmin = () => {
 
         //delete from data base
         try {
-            const res = await axios.delete(`/board/${id}`)
+            const res = await axios.delete(`/fetchboard/${id}`)
             setMessageCond(true)
             setMessage(res.data.msg)
             setTimeout(() => {

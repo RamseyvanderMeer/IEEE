@@ -15,7 +15,7 @@ const AboutAdmin = () => {
 
     const fetchData = async () => {
         try {
-            const res = await axios.get(`/about`)
+            const res = await axios.get(`/fetchabout`)
             // console.log(res.data)
             setAboutData(res.data)
         } catch (error) {
@@ -36,7 +36,7 @@ const AboutAdmin = () => {
         e.preventDefault()
         // console.log('clicked')
         try {
-            const res = await axios.post(`/about`, { about })
+            const res = await axios.post(`/fetchabout`, { about })
             setMessage(res.data.msg)
             setTimeout(() => {
                 setMessage('')
@@ -51,7 +51,7 @@ const AboutAdmin = () => {
     const deleteAbout = async (id) => {
 
         try {
-            const res = await axios.delete(`/about/${id}`)
+            const res = await axios.delete(`/fetchabout/${id}`)
             setMessageCond(true)
             setMessage(`${res.data.msg}`)
             setTimeout(() => {

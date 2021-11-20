@@ -2,19 +2,19 @@ const router = require('express').Router();
 const {getAbout, getAboutID, updateAbout, addAbout, delAbout} = require('../controlers/aboutCtrl');
 
 //get all users
-router.get('/about', getAbout)
+router.get('/fetchabout', getAbout)
 
 //add user 
-router.post('/about', addAbout)
+router.post('/fetchabout', addAbout)
 
 //get user by id
-router.get('/about/:id', getAboutID)
+router.get('/fetchabout/:id', getAboutID)
 
 //update user by id
-router.put('/about/update/:id', updateAbout)
+router.put('/fetchabout/update/:id', updateAbout)
 
 //delete user by id
-router.delete('/about/:id', delAbout)
+router.delete('/fetchabout/:id', delAbout)
 
 
 module.exports = router;

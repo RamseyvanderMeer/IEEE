@@ -79,8 +79,6 @@ function App() {
         <Route exact path='/sign-up' component={SignUp} />
         <Route exact path='/board' component={Board} />
         <Route exact path='/calendar' component={Calendar} />
-        <Route exact path='/about' component={About} />
-        <Route exact path='/about' component={Board} />
 
 
         <Route component={Footer} />

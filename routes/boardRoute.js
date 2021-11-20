@@ -2,19 +2,19 @@ const router = require('express').Router();
 const {getBoard, getBoardID, updateBoard, addBoard, delBoard} = require('../controlers/boardCtrl');
 
 //get board
-router.get('/board', getBoard)
+router.get('/fetchboard', getBoard)
 
 //add board 
-router.post('/board', addBoard)
+router.post('/fetchboard', addBoard)
 
 //get board by id
-router.get('/board/:id', getBoardID)
+router.get('/fetchboard/:id', getBoardID)
 
 //update board by id
-router.put('/board/update/:id', updateBoard)
+router.put('/fetchboard/update/:id', updateBoard)
 
 //delete board by id
-router.delete('/board/:id', delBoard)
+router.delete('/fetchboard/:id', delBoard)
 
 
 module.exports = router;

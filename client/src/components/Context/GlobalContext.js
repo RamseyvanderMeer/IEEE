@@ -44,7 +44,7 @@ export const DataProvider = ({ children }) => {
     const fetchData = async () => {
 
         // ...for fetchning about...
-        const res1 = await axios.get(`/about`);
+        const res1 = await axios.get(`/fetchabout`);
         //console.log(res1.data);
         setAbout(res1.data);
 
@@ -60,7 +60,7 @@ export const DataProvider = ({ children }) => {
 
 
         // ...for fetchning board...
-        const res3 = await axios.get(`/board`);
+        const res3 = await axios.get(`/fetchboard`);
         // console.log(res3.data);
         setBoard(res3.data);
     }

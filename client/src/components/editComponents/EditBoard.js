@@ -72,7 +72,7 @@ const EditBoard = (props) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`/board/${props.match.params.id}`)
+                const res = await axios.get(`/fetchboard/${props.match.params.id}`)
                 setBoards({
                     product_id: res.data.product_id,
                     name: res.data.name,
@@ -90,7 +90,7 @@ const EditBoard = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.put(`/board/update/${props.match.params.id}`, { ...board, images })
+            const res = await axios.put(`/fetchboard/update/${props.match.params.id}`, { ...board, images })
             setMessage(res.data.msg)
 
             setImages(false)

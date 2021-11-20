@@ -16,7 +16,7 @@ const EditAbout = (props) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`/about/${props.match.params.id}`)
+                const res = await axios.get(`/fetchabout/${props.match.params.id}`)
                 // console.log(res.data)
                 setAbout(res.data.about)
             } catch (error) {
@@ -34,7 +34,7 @@ const EditAbout = (props) => {
     const updateAbout = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.put(`/about/update/${props.match.params.id}`, { about })
+            const res = await axios.put(`/fetchabout/update/${props.match.params.id}`, { about })
             setMessage(`${res.data.msg}`)
         } catch (error) {
             console.log(error)

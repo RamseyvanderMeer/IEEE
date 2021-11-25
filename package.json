@@ -1,7 +1,7 @@
 {
-  "name": "mern",
+  "name": "IEEE-UIUC",
   "version": "1.0.0",
-  "description": "mern",
+  "description": "IEEE UIUC Branch Website",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RamseyvanderMeer/mern.git"
+    "url": "git+https://github.com/RamseyvanderMeer/IEEE.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RamseyvanderMeer/mern/issues"
+    "url": "https://github.com/RamseyvanderMeer/IEEE/issues"
   },
-  "homepage": "https://github.com/RamseyvanderMeer/mern#readme",
+  "homepage": "https://github.com/RamseyvanderMeer/IEEE#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cloudinary": "^1.26.0",

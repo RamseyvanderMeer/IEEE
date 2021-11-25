@@ -1,4 +1,4 @@
-mern
+IEEE UIUC
 ###cpanel command to kill cuncurrent processes
 # 1
 `ps auxf`

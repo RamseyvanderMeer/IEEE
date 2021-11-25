@@ -31,7 +31,7 @@ const Landing = () => {
                             <div class="uiuc">UIUC</div>
                         </p>
                         <i className="landing__content__text__content">
-                            Join us for events such as up tech talks, info sessions, luncheons, workshops, and socials!
+                            Join us for events such as tech talks, info sessions, luncheons, workshops, and socials!
                         </i>
                         <div class="button effect">
                             <ul>

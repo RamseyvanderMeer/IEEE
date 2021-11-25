@@ -64,7 +64,7 @@ const Navbar = () => {
                         <li onClick={() => scrollToElement('Landing')}><Link to="/">Home</Link></li>
                         <li onClick={() => scrollToElement('Social')}><Link to="/">Social</Link></li>
                         {/* <li onClick={() => scrollToElement('Board')}><Link to="/">Events</Link></li> */}
-                        <li onClick={() => scrollToElement('Technicals')}><Link to="/">Technical≠</Link></li>
+                        <li onClick={() => scrollToElement('Technicals')}><Link to="/">Technical</Link></li>
                         <li onClick={() => scrollToElement('Contact')}><Link to="/">Contact</Link></li>
                         <li className={isLogin? '':'adminLi'}><Link to={isLogin?'/admin':'/'}>{isLogin?<div className="admin">Admin</div>:''}</Link></li>
                         <li className={isLogin? '':'adminLi'}><Link to={isLogin?'/register':'/'}>{isLogin?<div className="admin">Register</div>:''}</Link></li>

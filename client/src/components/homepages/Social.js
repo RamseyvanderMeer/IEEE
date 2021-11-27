@@ -8,7 +8,7 @@ const Social = () => {
 
     const state = useContext(DataContext)
     const [social] = state.social
-    console.log(social)
+    // console.log(social)
 
     const responsive = {
         superLargeDesktop: {

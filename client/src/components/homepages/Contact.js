@@ -14,15 +14,15 @@ const Contact = () => {
     //inputs
     const handleNameChange = (e) => {
         setName(e.target.value)
-        console.log(name)
+        // console.log(name)
     }
     const handleEmailChange = (e) => {
         setEmail(e.target.value)
-        console.log(email)
+        // console.log(email)
     }
     const handleMessageChange = (e) => {
         setMessage(e.target.value)
-        console.log(message)
+        // console.log(message)
     }
 
     //submit form

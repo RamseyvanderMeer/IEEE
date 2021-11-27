@@ -8,6 +8,7 @@ const initialState = {
 
 const AboutAdmin = () => {
 
+    const [about, setAbout] = useState(initialState)
     const [about, setAbout] = useState('')
     const [aboutData, setAboutData] = useState([])
     const [message, setMessage] = useState('')
@@ -29,7 +30,7 @@ const AboutAdmin = () => {
 
     const onChangeAbout = (e) => {
         setAbout(e.target.value)
-        console.log(about)
+        //console.log(about)
     }
 
     const handleSubmit = async (e) => {
@@ -41,10 +42,10 @@ const AboutAdmin = () => {
             setTimeout(() => {
                 setMessage('')
             }, 2000)
-            setAbout('')
+            setAbout(initialState)
             // setAboutData([...aboutData,{about}])
         } catch (error) {
-            console.log(error)
+            //console.log(error)
         }
     }
 

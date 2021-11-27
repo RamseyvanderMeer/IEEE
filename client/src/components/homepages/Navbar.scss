@@ -78,6 +78,7 @@ nav {
     z-index: 10;
     opacity: 1;
     transition: transform 0.4s ease-in-out;
+    overflow: hidden;
 }
 
 .new-links {
@@ -135,7 +136,7 @@ nav {
         top: auto;
         transform: translateX(0%);
     }
-
+    
     .new-links {
         width: 100%;
         transform: translateX(0%);

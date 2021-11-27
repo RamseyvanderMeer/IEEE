@@ -31,7 +31,7 @@ const Login = () => {
             setUser({username:'',email:'',password:''})
 
             localStorage.setItem('toknStore', res.data.token)
-            console.log(res.data.token)
+            // console.log(res.data.token)
             setIsLogin(true)
 
             setErr(res.data.msg)

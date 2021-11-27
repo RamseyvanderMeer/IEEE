@@ -28,7 +28,7 @@ const EditAbout = (props) => {
 
     const onChangeAbout = (e) => {
         setAbout(e.target.value)
-        console.log(about)
+        // console.log(about)
     }
 
     const updateAbout = async (e) => {

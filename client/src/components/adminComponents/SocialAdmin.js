@@ -99,7 +99,7 @@ const SocialsAdmin = () => {
             try {
                 const res = await axios.get(`/social`)
                 setSocialData(res.data)
-                console.log(res.data)
+                // console.log(res.data)
 
             } catch (error) {
                 console.log(error);

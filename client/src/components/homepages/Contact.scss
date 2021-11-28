@@ -1,147 +1,76 @@
 @import "../../colors";
 
-.title{
-    color: white;
-    text-align: center;
-    font-size: 5em;
-    position: relative;
-    font-weight: 700;
-    // text-shadow: 0.6px 0.6px 2px $dark;
-}
-
-.main-container{
-    padding: 1em;
-}
-
-.contactForm-center{
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.contact_form form{
-    width: 100%;
-    box-shadow: 0 0 2px 1px rgb(11,72,92);
-    background: rgb(241,241,241);
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-
-}
-
-.contact_form form input,.contact_form form textarea{
-    margin-bottom: 10px;
-    padding: 7px;
-    border:1px solid rgb(40, 185, 185);
-}
-
-.contact_form button{
-    margin-top: 15px;
-    padding: 5px;
-    background:rgb(19,126,233);
-    outline: none;
-    border:none;
-    cursor: pointer;
-    color:rgb(230,227,227);
-    font-size:16px;
-    letter-spacing: 0.1rem;
-    width: 160px;
-
-}
-
-
-.contact_form form p{
-    margin-bottom: 10px;
-    text-align: center;
-    color:green;
-    letter-spacing: 0.1rem;
-}
-
-.contact_form form label{
-    margin-bottom: 5px;
-    letter-spacing: 0.2rem;
-    color:#555;
-
-}
-
-.contact-info{
-    width: 100%;
-    margin-bottom: 20px;
-
-}
-
-.contact-info h4{
-    color:#555;
-    letter-spacing: 0.2rem;
-    font-style: italic;
-    margin-bottom: 5px;
-
-}
-
-.contact-info img{
-    width: 100%;
-}
-
-button .load{
-    width: 100%;
-
-}
-
-button .load img{
-    width:60px ;
-    color:green;
-
-}
-
-
-@media screen and (min-width:664px){
- .contactForm-center{
-     display: flex;
-     flex-wrap: wrap;
-     flex-direction: row-reverse;
- }
-
- .contact_form{
-     flex:0 0 50%;
-     padding: 10px;
-     display: flex;
-     flex-direction: column;
- }
-
- .contact-info{
-     flex:1;
-     margin-bottom: 0;
-     align-self: center;
- }
-
-
-}
-
-@media screen and (min-width:864px){
-    .contactForm-center{
+.contact {
+    padding: 2em 0;
+    &__title {
+        text-align: center;
+        color: white;
+        font-size: 5em;
+        font-weight: 700;
+    }
+    &__container {
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-wrap: wrap;
-        flex-direction: row-reverse;
-        justify-content: space-evenly;
+        border-radius: 1em;
+        &__form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1em 2em;
+
+            &__content {
+            }
+        }
+        &__info {
+            padding: 2em;
+            &__title {
+                color: $lightest;
+                font-size: 1.25em;
+                font-weight: 600;
+            }
+            &__text {
+                color: white;
+            }
+        }
+    }
+    &__name {
+        width: 15em;
+    }
+    &__email {
+        width: 15em;
+    }
+    &__message {
+        width: 15em;
+    }
+    &__lable {
+        color: white;
+    }
+}
+.contact-media {
     
-    }
-   
-    .contact_form{
-        flex:0 0 400px;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-    }
-   
-    .contact-info{
-        flex:0 0 400px;
-     
-    }
-   
-   
-   }
+}
+.fab {
+    padding: .1em;
+    font-size: 1.25em;
+    text-align: center;
+    text-decoration: none;
+    margin: .35em .5em;
+}
 
+.fa:hover {
+    opacity: 0.7;
+}
 
+.fa-facebook {
+    z-index: 1;
+    color: white;
+}
 
-
-
+.fa-github {
+    color: white;
+}
+.fa-instagram {
+    color: white;
+}

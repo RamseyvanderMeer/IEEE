@@ -2,13 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
-const initialState = {
-    about: ''
-}
 
 const AboutAdmin = () => {
 
-    const [about, setAbout] = useState(initialState)
+    const [about, setAbout] = useState('')
     const [aboutData, setAboutData] = useState([])
     const [message, setMessage] = useState('')
     const [messageCond, setMessageCond] = useState(false)
@@ -41,7 +38,7 @@ const AboutAdmin = () => {
             setTimeout(() => {
                 setMessage('')
             }, 2000)
-            setAbout(initialState)
+            setAbout('')
             // setAboutData([...aboutData,{about}])
         } catch (error) {
             //console.log(error)

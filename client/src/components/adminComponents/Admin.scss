@@ -4,6 +4,7 @@
     box-shadow: 0 0 2px 1px rgb(11, 72, 92);
     padding: 10px;
     width: 100%;
+    z-index:1;
 }
 
 .admin-title {
@@ -119,7 +120,6 @@ form button:hover {
     .same-component {
         display: flex;
         flex-wrap: wrap;
-        align-items: flex-start;
     }
 
     .same-form {

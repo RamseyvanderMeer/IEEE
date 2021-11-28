@@ -9,7 +9,6 @@ const initialState = {
 const AboutAdmin = () => {
 
     const [about, setAbout] = useState(initialState)
-    const [about, setAbout] = useState('')
     const [aboutData, setAboutData] = useState([])
     const [message, setMessage] = useState('')
     const [messageCond, setMessageCond] = useState(false)

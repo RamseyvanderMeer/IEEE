@@ -4,6 +4,8 @@ import { DataContext } from '../Context/GlobalContext'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+import Event from './Event'
+
 const Technicals = () => {
 
     const state = useContext(DataContext)
@@ -48,34 +50,13 @@ const Technicals = () => {
                         overflow={true}
                     // showDots={true}
                     // renderDotsOutside={true}
-
                     >
                         {technicals.map((item) => (
-                            <div className="events__single-event" key={item._id}>
-                                <div className="events__single-event__info">
-                                    <div className="events__single-event__img">
-                                        <img src={item.images.url} alt="" />
-                                        <div className="events__overlay" />
-                                    </div>
-                                    <div class="events__single-event__info__content">
-                                        <h3 className="events__single-event__info__content__title">
-                                            {item.title}
-                                        </h3>
-                                        <p className="events__single-event__info__content__date">
-                                            {item.date}
-                                        </p>
-
-                                        <p className="events__single-event__info__content__description">
-                                            {item.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            <Event id={item.id} image={item.images.url} title={item.title} date={item.date} description={item.description} />
                         ))}
-                    </Carousel>
+                    </Carousel >
                 </div>
             </div>
-
         </div>
 
     )

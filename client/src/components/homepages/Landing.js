@@ -24,7 +24,7 @@ const Landing = () => {
                 <div class="landing__image__overlay" />
             </div>
             <div class="landing__content">
-                <FadeIn direction={'left'}>
+                <FadeIn direction={'down'}>
                     <div className="landing__content__text">
                         <p className="landing__content__text__title">
                             <div class="ieee">IEEE</div>
@@ -40,15 +40,16 @@ const Landing = () => {
                             </ul>
                         </div>
                     </div>
-                    <div class="container">
-                        <div onClick={() => scrollToElement('Social')} class="arrow-container animated">
-                            <div class="arrow-2">
-                                <i class="fa fa-angle-down"></i>
-                            </div>
-                            <div class="arrow-1 animated hinge zoomIn"></div>
-                        </div>
-                    </div>
                 </FadeIn>
+                <div class="container">
+                    <div onClick={() => scrollToElement('Social')} class="arrow-container animated">
+                        <div class="arrow-2">
+                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="arrow-1 animated hinge zoomIn"></div>
+                    </div>
+                </div>
+
             </div>
 
 

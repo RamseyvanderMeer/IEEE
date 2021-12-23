@@ -1,19 +1,24 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './Events.scss'
+import Popup from './Popup'
 
 const Event = (props) => {
 
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <button className="single-event" onClick={() => setIsOpen(!isOpen)} style={{ backgroundImage: `url(${props.image})` }} key={props.id}>
-            <div className="single-event__overlay" >
-                <div className="single-event__overlay__content">
-                    <h1>{props.title}</h1>
-                    <p className={isOpen ? 'show' : 'hidden'} >{props.description}</p>
-                </div>  
+        <div className='clear'>
+            <button className="single-event" onClick={() => setIsOpen(!isOpen)} style={{ backgroundImage: `url(${props.image})` }} key={props.id}>
+                <div className="single-event__overlay" >
+                    <div className="single-event__content">
+                        <div className='single-event__content__title'>{props.title}</div>
+                    </div>
+                </div>
+            </button>
+            <div >
+                <Popup setIsOpen={setIsOpen} isOpen={isOpen} id={props.id} image={props.image} title={props.title} date={props.date} description={props.description} />
             </div>
-        </button>
+        </div>
     )
 }
 

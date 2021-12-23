@@ -3,6 +3,7 @@ import './Events.scss'
 import { DataContext } from '../Context/GlobalContext'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Event from './Event';
 
 const Social = () => {
 
@@ -31,51 +32,25 @@ const Social = () => {
     };
 
     return (
-        <div className="event-page">
-            <div class="events-container">
-                <div className="event-page__title">
-                    Social Events
-                </div>
-                <div className="events">
-                    <Carousel
-                        swipeable={true}
-                        draggable={true}
-                        responsive={responsive}
-                        customTransition="transform 400ms ease-in-out"
-                        transitionDuration={300}
-                        infinite={true}
-                        minimumTouchDrag={50}
-                        autoPlay={true}
-                    // showDots={true}
-                    // renderDotsOutside={true}
-
-                    >
-                        {social.map((item) => (
-                            <div className="events__single-event" key={item._id}>
-                                <div className="events__single-event__info">
-                                    <div className="events__single-event__img">
-                                        <img src={item.images.url} alt="" />
-                                        <div className="events__overlay" />
-                                    </div>
-                                    <div class="events__single-event__info__content">
-                                        <h3 className="events__single-event__info__content__title">
-                                            {item.title}
-                                        </h3>
-                                        <p className="events__single-event__info__content__date">
-                                            {item.date}
-                                        </p>
-
-                                        <p className="events__single-event__info__content__description">
-                                            {item.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </Carousel>
-                </div>
-            </div>
-
+        <div>
+            <h1 className='event-page-title'>Social Events:</h1>
+            <Carousel
+                swipeable={true}
+                draggable={true}
+                responsive={responsive}
+                customTransition="transform 400ms ease-in-out"
+                transitionDuration={300}
+                infinite={true}
+                minimumTouchDrag={50}
+                // autoPlay={true}
+                overflow={true}
+            // showDots={true}
+            // renderDotsOutside={true}
+            >
+                {social.map((item) => (
+                    <Event id={item.id} image={item.images.url} title={item.title} date={item.date} description={item.description} />
+                ))}
+            </Carousel >
         </div>
     )
 }

@@ -32,33 +32,26 @@ const Technicals = () => {
     };
 
     return (
-        <div className="event-page">
-            <div class="events-container">
-                <div className="event-page__title">
-                    Technical Events
-                </div>
-                <div className="events">
-                    <Carousel
-                        swipeable={true}
-                        draggable={true}
-                        responsive={responsive}
-                        customTransition="transform 400ms ease-in-out"
-                        transitionDuration={300}
-                        infinite={true}
-                        minimumTouchDrag={50}
-                        autoPlay={true}
-                        overflow={true}
-                    // showDots={true}
-                    // renderDotsOutside={true}
-                    >
-                        {technicals.map((item) => (
-                            <Event id={item.id} image={item.images.url} title={item.title} date={item.date} description={item.description} />
-                        ))}
-                    </Carousel >
-                </div>
-            </div>
+        <div>
+            <h1 className='event-page-title'>Technical Events:</h1>
+            <Carousel
+                swipeable={true}
+                draggable={true}
+                responsive={responsive}
+                customTransition="transform 400ms ease-in-out"
+                transitionDuration={300}
+                infinite={true}
+                minimumTouchDrag={50}
+                // autoPlay={true}
+                overflow={true}
+            // showDots={true}
+            // renderDotsOutside={true}
+            >
+                {technicals.map((item) => (
+                    <Event id={item.id} image={item.images.url} title={item.title} date={item.date} description={item.description} />
+                ))}
+            </Carousel >
         </div>
-
     )
 }
 

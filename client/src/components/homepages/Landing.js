@@ -1,8 +1,6 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './Landing.scss'
-import alma from '../../images/AlmaVector.svg'
 import eceb from '../../images/ECEB.jpg'
-import { Link } from 'react-router-dom'
 import FadeIn from '../../FadeIn';
 import { scroller } from 'react-scroll';
 

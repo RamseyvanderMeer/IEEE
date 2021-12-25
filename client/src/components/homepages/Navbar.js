@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './Navbar.scss';
 import { Link } from 'react-router-dom';
 import Logo from '../../images/logo.png';

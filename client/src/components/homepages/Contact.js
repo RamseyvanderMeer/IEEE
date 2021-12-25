@@ -112,13 +112,13 @@ const Contact = () => {
                         Socials:
                     </p>
                     <div className="contact-media">
-                        <a href="https://github.com/ieee-uiuc" class="fab fa-github"></a>
-                        <a href="https://www.facebook.com/ieeeuiuc" class="fab fa-facebook"></a>
-                        <a href="https://www.instagram.com/ieee.uiuc/" class="fab fa-instagram"></a>
+                        <a href="https://github.com/ieee-uiuc" alt="github" class="fab fa-github"></a>
+                        <a href="https://www.facebook.com/ieeeuiuc" alt="facebook" class="fab fa-facebook"></a>
+                        <a href="https://www.instagram.com/ieee.uiuc/" alt="instagram" class="fab fa-instagram"></a>
                     </div>
                 </div>
             </div>
-            {/* <div className="main-container">
+            <div className="main-container">
             <div className="contactForm">
                 <h2 className="title">Contact</h2>
                 <div className="contactForm-center">
@@ -149,13 +149,13 @@ const Contact = () => {
                                 placeholder="input message..."
                                 required />
                             <div className="send-btn">
-                                <button type="submit">Send{bool? <b className="load" ><img src={Load} /></b>:''}</button>
+                                <button type="submit">Send{bool? <b className="load" ><img alt="loading" src={Load} /></b>:''}</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-        </div> */}
+        </div>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Events.scss'
-import Popup from './Popup'
+import Popup from './subpages/Popup'
 
 const Event = (props) => {
 

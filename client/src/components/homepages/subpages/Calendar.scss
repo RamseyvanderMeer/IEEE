@@ -3,8 +3,10 @@
 .calendar{
     width: 100vw;
     min-height: $pageHeight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &__container{
-        background-color: $dark;
         display: flex;
         justify-content: center;
         align-items: center;

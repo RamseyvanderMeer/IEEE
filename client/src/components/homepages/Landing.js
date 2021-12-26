@@ -17,21 +17,21 @@ const Landing = () => {
 
     return (
         <div className="landing">
-            <div class="landing__image">
+            <div className="landing__image">
                 <img alt="" src={eceb} />
-                <div class="landing__image__overlay" />
+                <div className="landing__image__overlay" />
             </div>
-            <div class="landing__content">
+            <div className="landing__content">
                 <FadeIn direction={'down'}>
                     <div className="landing__content__text">
                         <p className="landing__content__text__title">
-                            <div class="ieee">IEEE</div>
-                            <div class="uiuc">UIUC</div>
+                            <div className="ieee">IEEE</div>
+                            <div className="uiuc">UIUC</div>
                         </p>
                         <i className="landing__content__text__content">
                             Join us for events such as tech talks, info sessions, luncheons, workshops, and socials!
                         </i>
-                        <div class="button effect">
+                        <div className="button effect">
                             <ul>
                                 <li><a href="/about">About</a></li>
                                 <li><a href="/sign-up">Join</a></li>
@@ -39,12 +39,12 @@ const Landing = () => {
                         </div>
                     </div>
                 </FadeIn>
-                <div class="container">
-                    <div onClick={() => scrollToElement('Social')} class="arrow-container animated">
-                        <div class="arrow-2">
-                            <i class="fa fa-angle-down"></i>
+                <div className="container">
+                    <div onClick={() => scrollToElement('Social')} className="arrow-container animated">
+                        <div className="arrow-2">
+                            <i className="fa fa-angle-down"></i>
                         </div>
-                        <div class="arrow-1 animated hinge zoomIn"></div>
+                        <div className="arrow-1 animated hinge zoomIn"></div>
                     </div>
                 </div>
 

@@ -18,7 +18,7 @@ export default class Calendar extends Component {
         let INITIAL_EVENTS = [
             {
                 googleCalendarId: '4na3juef6r10antnbtmniav7nc@group.calendar.google.com',
-                className: 'event'
+                className:'event'
             }
         ]
         return (
@@ -37,10 +37,18 @@ export default class Calendar extends Component {
                             center: "title",
                             right: "prev,next"
                         }}
+                        // veiws={
+                        //     dayGridMonth={
+                        //         dayMinWidth:5
+                        //     }
+                        // }
                         slotMinTime="10:00:00"
                         slotMaxTime="20:00:00"
                         dayMinWidth={200}
                         stickyFooterScrollbar={true}
+                        eventColor= '#0F3D59'
+                        eventBackgroundColor= '#0F3D59'
+                        progressiveEventRendering='true'
                     />
                 </div>
             </div>

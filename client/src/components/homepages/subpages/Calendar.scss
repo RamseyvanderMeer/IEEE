@@ -3,7 +3,7 @@
 .calendar {
     min-height: $pageHeight;
     &__container {
-        margin: 3em 5em 0em 5em;
+        margin: 1em 4em 0em 4em;
     }
     @media screen and (max-width: 800px) {
         &__container {
@@ -13,6 +13,6 @@
 }
 
 .event {
-    background-color: $dark;
     padding: 3px 0px;
+    font-weight: 700;
 }

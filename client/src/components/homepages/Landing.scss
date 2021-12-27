@@ -29,8 +29,8 @@
         object-fit: cover;
         min-width: 110%;
         min-height: $page;
-        filter: blur(10px) brightness(35%) sepia(1%) opacity(100%);
-        -webkit-filter: blur(10px) brightness(35%) sepia(1%) opacity(100%);
+        filter: blur(10px) brightness(35%) sepia(1%) opacity(100%) grayscale(75%);
+        -webkit-filter: blur(10px) brightness(35%) sepia(1%) opacity(100%) grayscale(75%);
     }
 
     &__content {

@@ -8,7 +8,7 @@ const Event = (props) => {
 
     return (
         <div className='clear'>
-            <button className="single-event" onClick={() => setIsOpen(!isOpen)} style={{ backgroundImage: `url(${props.image})`, backgroundSize: 'cover' }} key={props.id}>
+            <button className="single-event" onClick={() => setIsOpen(!isOpen)} key={props.id}>
                 <div className="single-event__overlay" >
                     <div className="single-event__content">
                         <div className='single-event__content__title'>{props.title}</div>

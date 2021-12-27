@@ -21,12 +21,12 @@
             &__title {
                 font-size: 2em;
                 padding: 0.5em;
-                color: $lightest;
+                color: $dark;
                 font-weight: 600;
             }
             &__body {
                 font-size: 1.5em;
-                color: $light;
+                color: black;
                 font-weight: 400;
                 line-height: 1.5em;
             }
@@ -37,13 +37,13 @@
             &__title {
                 font-size: 2em;
                 padding: 0.5em;
-                color: $lightest;
+                color: $dark;
                 font-weight: 600;
             }
             &__body {
                 font-size: 1.5em;
                 padding: 1.5em;
-                color: $light;
+                color: black;
                 font-weight: 400;
                 line-height: 1.5em;
             }
@@ -62,7 +62,7 @@
         top: 5vh;
         font-size: 2em;
         padding: 35px;
-        color: white;
+        color: black;
         font-weight: bold;
         text-align: center;
     }

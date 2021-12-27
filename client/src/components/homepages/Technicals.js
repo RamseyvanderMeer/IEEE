@@ -33,7 +33,7 @@ const Technicals = () => {
 
     return (
         <div>
-            <h1 className='event-page-title'>Technical Events:</h1>
+            <h1 className='event-page-title'>Past Events:</h1>
             <Carousel
                 swipeable={true}
                 draggable={true}

@@ -62,6 +62,7 @@ const Navbar = () => {
                     <ul className={toggle ? "new-links links" : "links"} onClick={closeNavbar}>
                         {/* <li onClick={() => scrollToElement('Home')}><Link to="/">Home</Link></li> */}
                         <li onClick={() => scrollToElement('Landing')}><Link to="/">Home</Link></li>
+                        <li onClick={() => scrollToElement('about')}><Link to="/">About</Link></li>
                         <li onClick={() => scrollToElement('Social')}><Link to="/">Social</Link></li>
                         {/* <li onClick={() => scrollToElement('Board')}><Link to="/">Events</Link></li> */}
                         <li onClick={() => scrollToElement('Technicals')}><Link to="/">Technical</Link></li>

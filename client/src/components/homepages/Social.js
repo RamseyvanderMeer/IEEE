@@ -33,7 +33,7 @@ const Social = () => {
 
     return (
         <div>
-            <h1 className='event-page-title'>Social Events:</h1>
+            <h1 className='event-page-title'>Upcoming Events:</h1>
             <Carousel
                 swipeable={true}
                 draggable={true}

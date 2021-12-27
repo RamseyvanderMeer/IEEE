@@ -16,36 +16,44 @@
         justify-content: space-around;
         // gap: 1em;
         &__grainger {
-            margin: 1em 0 0 0 ;
+            margin: 1em 0 0 0;
             flex: 50%;
             &__title {
-                font-size: 1.5em;
-                padding: .5em;
-                color: $darkest;
+                font-size: 2em;
+                padding: 0.5em;
+                color: $lightest;
                 font-weight: 600;
             }
             &__body {
-                font-size: 1em;
-                color: $dark;
+                font-size: 1.5em;
+                color: $light;
                 font-weight: 400;
                 line-height: 1.5em;
             }
         }
         &__nongrainger {
-            margin: 1em 0 0 0 ;
+            margin: 1em 0 0 0;
             flex: 50%;
             &__title {
-                font-size: 1.5em;
-                padding: .5em;
-                color: $darkest;
+                font-size: 2em;
+                padding: 0.5em;
+                color: $lightest;
                 font-weight: 600;
             }
             &__body {
-                font-size: 1em;
+                font-size: 1.5em;
                 padding: 1.5em;
-                color: $dark;
+                color: $light;
                 font-weight: 400;
                 line-height: 1.5em;
+            }
+        }
+        @media screen and (max-width: 800px) {
+            &__nongrainger {
+                flex: 100%;
+            }
+            &__grainger {
+                flex: 100%;
             }
         }
     }
@@ -54,11 +62,11 @@
         top: 5vh;
         font-size: 2em;
         padding: 35px;
-        color: $lightest;
+        color: white;
         font-weight: bold;
         text-align: center;
     }
-    &__link{
+    &__link {
         text-decoration: underline;
     }
 }

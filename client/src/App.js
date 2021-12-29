@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import Navbar from './components/homepages/Navbar'
 import About from './components/homepages/About'
 import Social from './components/homepages/Social'
-import Technicals from './components/homepages/Technicals'
+import Upcoming from './components/homepages/Upcoming'
 import Board from './components/homepages/subpages/Board'
 import Contact from './components/homepages/Contact'
 import Login from './components/homepages/Login'
@@ -47,8 +47,8 @@ function App() {
         </Element>
       </FadeIn>
       <FadeIn direction={'right'}>
-        <Element className='Technicals'>
-          <Route exact path='/' component={Technicals} />
+        <Element className='Upcoming'>
+          <Route exact path='/' component={Upcoming} />
         </Element>
       </FadeIn>
       <FadeIn direction={'left'}>

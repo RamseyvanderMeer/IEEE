@@ -6,7 +6,7 @@ import "react-multi-carousel/lib/styles.css";
 
 import Event from './Event'
 
-const Technicals = () => {
+const Upcoming = () => {
 
     const state = useContext(DataContext)
     const [technicals] = state.technicals
@@ -34,7 +34,7 @@ const Technicals = () => {
     return (
         <div>
             <div className='container-event-title'>
-                <h1 className='event-page-title' >Technical Events:</h1>
+                <h1 className='event-page-title' >Upcoming Events:</h1>
             </div>
             <Carousel
                 swipeable={true}
@@ -50,11 +50,11 @@ const Technicals = () => {
             // renderDotsOutside={true}
             >
                 {technicals.map((item) => (
-                    <Event id={item.id} image={item.images.url} title={item.title} date={item.date} description={item.description} />
+                    item.upcoming && <Event id={item.id} image={item.images.url} title={item.title} date={item.date} description={item.description} location={item.location} />
                 ))}
             </Carousel >
         </div>
     )
 }
 
-export default Technicals
+export default Upcoming

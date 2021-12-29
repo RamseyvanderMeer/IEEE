@@ -71,13 +71,7 @@ export const DataProvider = ({ children }) => {
                 fetchData();
             }
 
-            //console.log(dataFin);
             return setDataFin(false)
-
-            //    fetchAbout();
-            //    fetchSocial();
-            //    fetchEvents();
-            //    fetchBoard();
 
         } catch (err) {
             console.log(err);
@@ -90,8 +84,9 @@ export const DataProvider = ({ children }) => {
         social: [social, setSocial],
         board: [board, setBoard],
         events: [events, setEvents],
-        isLogin: [isLogin, setIsLogin]
-
+        isLogin: [isLogin, setIsLogin],
+        dataFin: [dataFin, setDataFin],
+        loginFin: [loginFin, setLoginFin]
     }
 
     return (

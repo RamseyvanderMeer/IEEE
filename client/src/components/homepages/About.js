@@ -8,6 +8,7 @@ const About = () => {
 
     const state = useContext(DataContext)
     const [about] = state.about
+    const [dataFin, setDataFin] = state.dataFin
     // console.log(about)
 
     return (
@@ -17,11 +18,12 @@ const About = () => {
                     <div className="about__title">
                         About IEEE UIUC
                     </div>
-                    <div className="about__text">
+                    {dataFin && <div className="about__text">loading about...</div>}
+                    {!dataFin && <div className="about__text">
                         {about.map((item) => (
                             item.about
                         ))}
-                    </div>
+                    </div>}
                     <div className="about__button-container">
                         <Link to={'/join'} className="about__button-container__button">
                             join

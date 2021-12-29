@@ -63,9 +63,9 @@ const Navbar = () => {
                         {/* <li onClick={() => scrollToElement('Home')}><Link to="/">Home</Link></li> */}
                         <li onClick={() => scrollToElement('Landing')}><Link to="/">Home</Link></li>
                         <li onClick={() => scrollToElement('about')}><Link to="/">About</Link></li>
-                        <li onClick={() => scrollToElement('Social')}><Link to="/">Social</Link></li>
+                        <li onClick={() => scrollToElement('UpcomingEvents')}><Link to="/">Events</Link></li>
                         {/* <li onClick={() => scrollToElement('Board')}><Link to="/">Events</Link></li> */}
-                        <li onClick={() => scrollToElement('Events')}><Link to="/">Event</Link></li>
+                        {/* <li onClick={() => scrollToElement('PastEvents')}><Link to="/">previous</Link></li> */}
                         <li onClick={() => scrollToElement('Contact')}><Link to="/">Contact</Link></li>
                         <li><Link to="/Calendar">Calendar</Link></li>
                         <li className={isLogin? '':'adminLi'}><Link to={isLogin?'/admin':'/'}>{isLogin?<div className="admin">Admin</div>:''}</Link></li>

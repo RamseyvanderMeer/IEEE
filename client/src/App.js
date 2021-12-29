@@ -2,8 +2,8 @@ import './App.scss';
 import React, { useContext } from 'react'
 import Navbar from './components/homepages/Navbar'
 import About from './components/homepages/About'
-import Social from './components/homepages/Social'
-import Upcoming from './components/homepages/Upcoming'
+import PastEvents from './components/homepages/PastEvents'
+import UpcomingEvents from './components/homepages/UpcomingEvents'
 import Board from './components/homepages/subpages/Board'
 import Contact from './components/homepages/Contact'
 import Login from './components/homepages/Login'
@@ -42,13 +42,13 @@ function App() {
         <Route exact path='/' component={About} />
       </Element>
       <FadeIn direction={'left'}>
-        <Element className='Social'>
-          <Route exact path='/' component={Social} />
+        <Element className='PastEvents'>
+          <Route exact path='/' component={PastEvents} />
         </Element>
       </FadeIn>
       <FadeIn direction={'right'}>
-        <Element className='Upcoming'>
-          <Route exact path='/' component={Upcoming} />
+        <Element className='UpcomingEvents'>
+          <Route exact path='/' component={UpcomingEvents} />
         </Element>
       </FadeIn>
       <FadeIn direction={'left'}>

@@ -3,10 +3,9 @@ import './Events.scss'
 import { DataContext } from '../Context/GlobalContext'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
 import Event from './Event'
 
-const Upcoming = () => {
+const UpcomingEvents = () => {
 
     const state = useContext(DataContext)
     const [events] = state.events
@@ -57,4 +56,4 @@ const Upcoming = () => {
     )
 }
 
-export default Upcoming
+export default UpcomingEvents

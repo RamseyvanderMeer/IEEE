@@ -5,10 +5,10 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Event from './Event';
 
-const Social = () => {
+const PastEvents = () => {
 
     const state = useContext(DataContext)
-    const [social] = state.social
+    const [events] = state.events
     // console.log(social)
 
     const responsive = {
@@ -34,7 +34,7 @@ const Social = () => {
     return (
         <div>
             <div className='container-event-title'>
-                <h1 className='event-page-title' >Social Events:</h1>
+                <h1 className='event-page-title' >Past Events:</h1>
             </div>
             <Carousel
                 swipeable={true}
@@ -49,12 +49,12 @@ const Social = () => {
             // showDots={true}
             // renderDotsOutside={true}
             >
-                {social.map((item) => (
-                    <Event key={item.id} image={item.images.url} title={item.title} date={item.date} description={item.description} />
+                {events.map((item) => (
+                    !item.upcoming && <Event id={item.id} image={item.images.url} title={item.title} date={item.date} description={item.description} location={item.location} />
                 ))}
             </Carousel >
         </div>
     )
 }
 
-export default Social
+export default PastEvents

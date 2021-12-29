@@ -41,14 +41,14 @@ function App() {
       <Element className='About'>
         <Route exact path='/' component={About} />
       </Element>
-      <FadeIn direction={'left'}>
-        <Element className='PastEvents'>
-          <Route exact path='/' component={PastEvents} />
-        </Element>
-      </FadeIn>
       <FadeIn direction={'right'}>
         <Element className='UpcomingEvents'>
           <Route exact path='/' component={UpcomingEvents} />
+        </Element>
+      </FadeIn>
+      <FadeIn direction={'left'}>
+        <Element className='PastEvents'>
+          <Route exact path='/' component={PastEvents} />
         </Element>
       </FadeIn>
       <FadeIn direction={'left'}>

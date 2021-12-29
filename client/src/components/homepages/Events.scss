@@ -1,12 +1,22 @@
 @import "../../colors";
 
-.event-page-title {
-    color: black;
-    text-align: center;
-    font-size: 5em;
+.container-event-title{
     position: relative;
+    top: 0;
+    left: 0;
+    height: 15em;
+    margin: 0 3em .25em 3em;
+}
+
+.event-page-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: black;
+    font-size: 5em;
     font-weight: 700;
-    padding: 0em 3em 0.25em 3em;
+    text-align: center;
     // text-shadow: 0.6px 0.6px 2px $darkest;
 }
 
@@ -102,7 +112,8 @@
     text-align: center;
     color: white;
     z-index: 5;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     &__background {
         position: absolute;
         width: 120%;

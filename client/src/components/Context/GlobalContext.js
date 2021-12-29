@@ -7,7 +7,7 @@ export const DataProvider = ({ children }) => {
     const [isLogin, setIsLogin] = useState(false);
     const [about, setAbout] = useState([]);
     const [social, setSocial] = useState([]);
-    const [technicals, setTechnicals] = useState([]);
+    const [events, setEvents] = useState([]);
     const [board, setBoard] = useState([]);
     const [loginFin, setLoginFin] = useState(true);
     const [dataFin, setDataFin] = useState(true);
@@ -53,10 +53,10 @@ export const DataProvider = ({ children }) => {
         // console.log(res2.data);
         setSocial(res2.data);
 
-        // ...for fetching technicals
-        const res4 = await axios.get(`/technical`);
+        // ...for fetching events
+        const res4 = await axios.get(`/event`);
         // console.log(res4.data);
-        setTechnicals(res4.data);
+        setEvents(res4.data);
 
 
         // ...for fetchning board...
@@ -76,7 +76,7 @@ export const DataProvider = ({ children }) => {
 
             //    fetchAbout();
             //    fetchSocial();
-            //    fetchTechnicals();
+            //    fetchEvents();
             //    fetchBoard();
 
         } catch (err) {
@@ -89,7 +89,7 @@ export const DataProvider = ({ children }) => {
         about: [about, setAbout],
         social: [social, setSocial],
         board: [board, setBoard],
-        technicals: [technicals, setTechnicals],
+        events: [events, setEvents],
         isLogin: [isLogin, setIsLogin]
 
     }

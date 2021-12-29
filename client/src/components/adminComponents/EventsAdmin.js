@@ -12,13 +12,13 @@ const initialState = {
     upcoming:null
 }
 
-const TechnicalsAdmin = () => {
+const EventsAdmin = () => {
 
-    const [technical, setTechnical] = useState(initialState)
+    const [event, setEvent] = useState(initialState)
     const [images, setImages] = useState(false)
     const [message, setMessage] = useState('')
     const [messageCond, setMessageCond] = useState(false)
-    const [technicalData, setTechnicalData] = useState([])
+    const [eventData, setEventData] = useState([])
 
 
     //upload
@@ -68,7 +68,7 @@ const TechnicalsAdmin = () => {
 
         const { name, value } = e.target
 
-        setTechnical({ ...technical, [name]: value })
+        setEvent({ ...event, [name]: value })
         // console.log(product.description)
         // console.log(product.title)
         // console.log(product.product_id)
@@ -78,12 +78,12 @@ const TechnicalsAdmin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.post('/technical', { ...technical, images })
+            const res = await axios.post('/event', { ...event, images })
             setMessage(res.data.msg)
             setTimeout(() => {
                 setMessage('')
             }, 2000)
-            setTechnical(initialState)
+            setEvent(initialState)
             setImages(false)
         } catch (error) {
             console.log(error)
@@ -99,8 +99,8 @@ const TechnicalsAdmin = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`/technical`)
-                setTechnicalData(res.data)
+                const res = await axios.get(`/event`)
+                setEventData(res.data)
                 // console.log(res.data)
 
             } catch (error) {
@@ -111,15 +111,15 @@ const TechnicalsAdmin = () => {
     }, [])
 
     //delete functionality
-    const deleteTechnical = async (id) => {
+    const deleteEvent = async (id) => {
         //delete from ui
-        const filterTechnical = technicalData.filter(item => item._id !== id)
+        const filterEvent = eventData.filter(item => item._id !== id)
 
-        setTechnicalData(filterTechnical)
+        setEventData(filterEvent)
 
         //delete from data base
         try {
-            const res = await axios.delete(`/technical/${id}`)
+            const res = await axios.delete(`/event/${id}`)
             setMessageCond(true)
             setMessage(res.data.msg)
             setTimeout(() => {
@@ -136,13 +136,13 @@ const TechnicalsAdmin = () => {
         <div className="same-component">
             <div className="same-form">
                 <form onSubmit={handleSubmit}>
-                    <h4> Technical Event component </h4>
+                    <h4> Event Event component </h4>
 
                     <label htmlFor="text">id</label>
                     <input type="text"
                         name="product_id"
                         id="product_id"
-                        value={technical.product_id}
+                        value={event.product_id}
                         onChange={handleChangeInput}
                         required
                     />
@@ -151,7 +151,7 @@ const TechnicalsAdmin = () => {
                     <input type="text"
                         name="title"
                         id="title"
-                        value={technical.title}
+                        value={event.title}
                         onChange={handleChangeInput}
                         required
                     />
@@ -160,7 +160,7 @@ const TechnicalsAdmin = () => {
                     <input type="text"
                         name="date"
                         id="date"
-                        value={technical.date}
+                        value={event.date}
                         onChange={handleChangeInput}
                         required
                     />
@@ -168,7 +168,7 @@ const TechnicalsAdmin = () => {
                     <label htmlFor="text">Description</label>
                     <textarea name="description"
                         id="description"
-                        value={technical.description}
+                        value={event.description}
                         onChange={handleChangeInput}
                         required
                         cols="30"
@@ -179,7 +179,7 @@ const TechnicalsAdmin = () => {
                     <input type="text"
                         name="location"
                         id="location"
-                        value={technical.location}
+                        value={event.location}
                         onChange={handleChangeInput}
                         required
                     />
@@ -188,7 +188,7 @@ const TechnicalsAdmin = () => {
                     <input type="text"
                         name="upcoming"
                         id="upcoming"
-                        value={technical.upcoming}
+                        value={event.upcoming}
                         onChange={handleChangeInput}
                         required
                     />
@@ -215,18 +215,18 @@ const TechnicalsAdmin = () => {
             </div>
             <div className="same-item">
                 <div className="about-info">
-                    {technicalData.map((item) => (
-                        <div className="technicals-admin" key={item._id}>
+                    {eventData.map((item) => (
+                        <div className="events-admin" key={item._id}>
                             <div className="icons">
-                                <Link to={`/editTechnical/${item._id}`}><i className="fas fa-edit"></i></Link>
-                                <i className="fas fa-trash" onClick={() => deleteTechnical(item._id)}></i>
+                                <Link to={`/editEvent/${item._id}`}><i className="fas fa-edit"></i></Link>
+                                <i className="fas fa-trash" onClick={() => deleteEvent(item._id)}></i>
                             </div>
 
-                            <div className="single-technical">
-                                <div className="single-technical-img">
+                            <div className="single-event">
+                                <div className="single-event-img">
                                     <img src={item.images.url} alt="" />
                                 </div>
-                                <div className="single-technical-info">
+                                <div className="single-event-info">
                                     <h3>title:{item.title}</h3>
                                     <p>description:{item.description}</p>
                                     <i>date:{item.date}</i><br />
@@ -243,4 +243,4 @@ const TechnicalsAdmin = () => {
     )
 }
 
-export default TechnicalsAdmin
+export default EventsAdmin

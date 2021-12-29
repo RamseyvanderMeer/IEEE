@@ -9,7 +9,7 @@ import Event from './Event'
 const Upcoming = () => {
 
     const state = useContext(DataContext)
-    const [technicals] = state.technicals
+    const [events] = state.events
 
     const responsive = {
         superLargeDesktop: {
@@ -49,7 +49,7 @@ const Upcoming = () => {
             // showDots={true}
             // renderDotsOutside={true}
             >
-                {technicals.map((item) => (
+                {events.map((item) => (
                     item.upcoming && <Event id={item.id} image={item.images.url} title={item.title} date={item.date} description={item.description} location={item.location} />
                 ))}
             </Carousel >

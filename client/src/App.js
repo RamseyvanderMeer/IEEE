@@ -18,7 +18,7 @@ import Admin from './components/adminComponents/Admin'
 
 import EditAbout from './components/editComponents/EditAbout'
 import EditSocial from './components/editComponents/EditSocial'
-import EditTechnicals from './components/editComponents/EditTechnicals'
+import EditEvents from './components/editComponents/EditEvents'
 import EditBoard from './components/editComponents/EditBoard'
 
 import { Route } from 'react-router-dom'
@@ -62,7 +62,7 @@ function App() {
       {/* <Route exact path='/admin' {...console.log(isLogin)} render={() => isLogin ? <Admin /> : <Login />} /> */}
       <Route exact path='/admin' render={() => isLogin ? <Admin /> : <Login />} />
       <Route exact path='/editSocial/:id' component={EditSocial} />
-      <Route exact path='/editTechnical/:id' component={EditTechnicals} />
+      <Route exact path='/editEvent/:id' component={EditEvents} />
       <Route exact path='/editBoard/:id' component={EditBoard} />
       <Route exact path='/editAbout/:id' component={EditAbout} />
       <Route exact path='/join' component={SignUp} />

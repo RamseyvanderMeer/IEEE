@@ -1,20 +1,20 @@
-const technicalSchema = require('../models/technicalModel');
+const eventSchema = require('../models/eventModel');
 
 
-exports.getTechnical = async (req, res) => {
+exports.getEvent = async (req, res) => {
     try {
-        const technical = await technicalSchema.find(req.body);
-        res.json(technical);
+        const event = await eventSchema.find(req.body);
+        res.json(event);
     } catch (error) {
         res.status(500).json({ msg: 'server problems' })
     }
 }
 
-exports.addTechnical = async (req, res) => {
+exports.addEvent = async (req, res) => {
     const { title, product_id, date, description, images, location, upcoming } = req.body;
 
     try {
-        const technical = new technicalSchema({
+        const event = new eventSchema({
             title,
             product_id,
             description,
@@ -23,28 +23,28 @@ exports.addTechnical = async (req, res) => {
             location,
             upcoming
         })
-        await technical.save();
+        await event.save();
         res.json({msg:"product added"});
     } catch (error) {
         res.status(500).json({ msg: `server poblems ${error}` })
     }
 }
 
-exports.getTechnicalID = async (req, res) => {
+exports.getEventID = async (req, res) => {
     try {
-        const technical = await technicalSchema.findById(req.params.id)
-        res.json(technical)
+        const event = await eventSchema.findById(req.params.id)
+        res.json(event)
     } catch (error) {
         res.status(500).json({ msg: 'server problems' })
     }
 
 }
 
-exports.updateTechnical = async (req, res) => {
+exports.updateEvent = async (req, res) => {
     const { title, product_id, description, images, location, upcoming } = req.body;
 
     try {
-        const technical = await technicalSchema.findByIdAndUpdate(req.params.id, {
+        const event = await eventSchema.findByIdAndUpdate(req.params.id, {
             title,
             product_id,
             description,
@@ -54,7 +54,7 @@ exports.updateTechnical = async (req, res) => {
             upcoming
         });
 
-        let results = technical.save()
+        let results = event.save()
         await results
         res.json({ msg: 'Items Updated' })
     } catch (error) {
@@ -62,11 +62,11 @@ exports.updateTechnical = async (req, res) => {
     }
 }
 
-exports.delTechnical = async (req, res) => {
+exports.delEvent = async (req, res) => {
     try {
-        const technical = await technicalSchema.findByIdAndDelete(req.params.id);
+        const event = await eventSchema.findByIdAndDelete(req.params.id);
 
-        technical;
+        event;
 
         res.json({msg:"Item deleted"})
     } catch (error) {

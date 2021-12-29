@@ -7,7 +7,9 @@ const initialState = {
     title: '',
     description: '',
     images: '',
-    date: ''
+    date: '',
+    location: '',
+    upcoming:null
 }
 
 const TechnicalsAdmin = () => {
@@ -170,8 +172,26 @@ const TechnicalsAdmin = () => {
                         onChange={handleChangeInput}
                         required
                         cols="30"
-                        rows="3" />
+                        rows="3"
+                    />
 
+                    <label htmlFor="text">Location</label>
+                    <input type="text"
+                        name="location"
+                        id="location"
+                        value={technical.location}
+                        onChange={handleChangeInput}
+                        required
+                    />
+
+                    <label htmlFor="text">upcoming</label>
+                    <input type="text"
+                        name="upcoming"
+                        id="upcoming"
+                        value={technical.upcoming}
+                        onChange={handleChangeInput}
+                        required
+                    />
 
                     <div className="upload">
                         <input
@@ -207,9 +227,11 @@ const TechnicalsAdmin = () => {
                                     <img src={item.images.url} alt="" />
                                 </div>
                                 <div className="single-technical-info">
-                                    <h3>{item.title}</h3>
-                                    <p>{item.description}</p>
-                                    <i>{item.date}</i>
+                                    <h3>title:{item.title}</h3>
+                                    <p>description:{item.description}</p>
+                                    <i>date:{item.date}</i><br />
+                                    <i>location:{item.location}</i><br />
+                                    <i>upcoming:{JSON.stringify(item.upcoming)}</i>
                                 </div>
                             </div>
                             <h3 className={messageCond ? "new-delete item-delete-tab" : "item-delete-tab"}>{message}</h3>

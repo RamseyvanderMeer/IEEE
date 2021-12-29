@@ -7,7 +7,9 @@ const initialState = {
     product_id: '',
     title: '',
     description: '',
-    date: ''
+    date: '',
+    location: '',
+    upcoming: false
 }
 
 const EditTechnical = (props) => {
@@ -77,7 +79,9 @@ const EditTechnical = (props) => {
                     product_id: res.data.product_id,
                     date: res.data.date,
                     title: res.data.title,
-                    description: res.data.description
+                    description: res.data.description,
+                    location: res.data.location,
+                    upcoming: res.data.upcoming
                 })
             } catch (error) {
                 console.log(error);
@@ -130,7 +134,10 @@ const EditTechnical = (props) => {
                                 required
                                 value={technical.title}
                                 onChange={handleChangeInput}
-                                id="title" />
+                                id="title"
+                            />
+
+
                             <label htmlFor="text">date</label>
                             <input
                                 type="text"
@@ -138,7 +145,28 @@ const EditTechnical = (props) => {
                                 required
                                 value={technical.date}
                                 onChange={handleChangeInput}
-                                id="date" />
+                                id="date"
+                            />
+
+                            <label htmlFor="text">location</label>
+                            <input
+                                type="text"
+                                name="location"
+                                required
+                                value={technical.location}
+                                onChange={handleChangeInput}
+                                id="location"
+                            />
+
+                            <label htmlFor="text">upcoming</label>
+                            <input
+                                type="text"
+                                name="upcoming"
+                                required
+                                value={technical.upcoming}
+                                onChange={handleChangeInput}
+                                id="upcoming"
+                            />
 
                             <label htmlFor="text">Description</label>
                             <textarea type="text"

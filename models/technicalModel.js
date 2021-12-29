@@ -22,6 +22,14 @@ const technicalSchema = new mongoose.Schema({
     images:{
         type:Object,
         required:true
+    },
+    location:{
+        type:String,
+        required:true
+    },
+    upcoming:{
+        type:Boolean,
+        required:true
     }
 
 })

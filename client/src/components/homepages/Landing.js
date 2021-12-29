@@ -26,10 +26,10 @@ const Landing = () => {
                     <div className="landing__content">
                         <FadeIn direction={'down'}>
                             <div className="landing__content__text">
-                                <p className="landing__content__text__title">
+                                <div className="landing__content__text__title">
                                     <div className="ieee">IEEE</div>
                                     <div className="uiuc">UIUC</div>
-                                </p>
+                                </div>
                                 <i className="landing__content__text__content">
                                     Join us for events such as tech talks, info sessions, luncheons, workshops, and socials!
                                 </i>

@@ -49,7 +49,7 @@ const UpcomingEvents = () => {
             // renderDotsOutside={true}
             >
                 {events.map((item) => (
-                    item.upcoming && <Event id={item.id} image={item.images.url} title={item.title} date={item.date} description={item.description} location={item.location} />
+                    item.upcoming && <Event key={item.id} image={item.images.url} title={item.title} date={item.date} description={item.description} location={item.location} />
                 ))}
             </Carousel >
         </div>

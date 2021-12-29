@@ -20,7 +20,7 @@ const Board = () => {
                         <FadeIn direction={'left'}>
                             <div className="board__person__card" key={item._id}>
                                 <div className="board__person__card__image">
-                                    <img className="board__person__card__img" src={item.images.url} alt="" />
+                                    <img className="board__person__card__img" src={item.images.url} alt={item._id} />
                                 </div>
                                 <p className="board__person__card__name">
                                     {item.name}

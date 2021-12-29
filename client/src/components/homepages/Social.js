@@ -50,7 +50,7 @@ const Social = () => {
             // renderDotsOutside={true}
             >
                 {social.map((item) => (
-                    <Event id={item.id} image={item.images.url} title={item.title} date={item.date} description={item.description} />
+                    <Event key={item.id} image={item.images.url} title={item.title} date={item.date} description={item.description} />
                 ))}
             </Carousel >
         </div>

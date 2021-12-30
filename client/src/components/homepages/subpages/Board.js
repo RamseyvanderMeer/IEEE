@@ -8,7 +8,7 @@ const Board = () => {
 
     const state = useContext(DataContext)
     const [board] = state.board
-    const [dataFin] = state.dataFin
+    const [dataBoard] = state.dataBoard
 
     return (
         <div className="board">
@@ -17,7 +17,7 @@ const Board = () => {
                     IEEE Exec Board
                 </h2>
 
-                {dataFin && <div className="board__person">
+                {dataBoard && <div className="board__person">
                     <FadeIn direction={'left'}>
                         <div className="board__person__card" key={'loading'}>
                             <div className="board__person__card__image">
@@ -36,7 +36,7 @@ const Board = () => {
                     </FadeIn>
                 </div>}
 
-                {!dataFin && <div className="board__person">
+                {!dataBoard && <div className="board__person">
                     {board.map((item) => (
                         <FadeIn direction={'left'}>
                             <div className="board__person__card" key={item._id}>

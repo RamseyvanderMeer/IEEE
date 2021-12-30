@@ -9,7 +9,7 @@ const PastEvents = () => {
 
     const state = useContext(DataContext)
     const [events] = state.events
-    const [dataFin] = state.dataFin
+    const [dataEvents] = state.dataEvents
     // console.log(social)
 
     const responsive = {
@@ -51,8 +51,8 @@ const PastEvents = () => {
             // showDots={true}
             // renderDotsOutside={true}
             >
-                {dataFin && <Event key={'loading...'} image={'loading...'} title={'loading...'} date={'loading...'} description={'loading...'} location={'loading...'} />}
-                {!dataFin && <div>
+                {dataEvents && <Event key={'loading...'} image={'loading...'} title={'loading...'} date={'loading...'} description={'loading...'} location={'loading...'} />}
+                {!dataEvents && <div>
                     {events.map((item) => (
                         !item.upcoming && <Event key={item.id} image={item.images.url} title={item.title} date={item.date} description={item.description} location={item.location} />
                     ))}

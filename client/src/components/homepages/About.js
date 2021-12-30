@@ -8,7 +8,7 @@ const About = () => {
 
     const state = useContext(DataContext)
     const [about] = state.about
-    const [dataFin, setDataFin] = state.dataFin
+    const [dataAbout, setdataAbout] = state.dataAbout
     // console.log(about)
 
     return (
@@ -18,8 +18,8 @@ const About = () => {
                     <div className="about__title">
                         About IEEE UIUC
                     </div>
-                    {dataFin && <div className="about__text">loading about...</div>}
-                    {!dataFin && <div className="about__text">
+                    {dataAbout && <div className="about__text">loading about...</div>}
+                    {!dataAbout && <div className="about__text">
                         {about.map((item) => (
                             item.about
                         ))}

@@ -36,7 +36,8 @@
         }
         @media screen and (max-width: 500px) {
             &__button{
-                width: 15vw;
+                width: 40vw;
+                margin: 0 .5em;
             }
         }
         &__button:hover {

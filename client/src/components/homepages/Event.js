@@ -16,7 +16,7 @@ const Event = (props) => {
                 </div>
             </button>
             <div >
-                <Popup setIsOpen={setIsOpen} isOpen={isOpen} key={props.key} image={props.image} title={props.title} date={props.date} description={props.description} />
+                <Popup setIsOpen={setIsOpen} isOpen={isOpen} location={props.location} key={props.key} image={props.image} title={props.title} date={props.date} description={props.description} />
             </div>
         </div>
     )

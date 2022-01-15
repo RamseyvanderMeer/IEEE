@@ -31,7 +31,6 @@ const UpcomingEvents = () => {
         }
     };
 
-    const colors = ["red", "green", "blue", "orange"];
 
     return (
         <div>

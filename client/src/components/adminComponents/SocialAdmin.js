@@ -198,7 +198,7 @@ const SocialsAdmin = () => {
                     {socialData.map((item) => (
                         <div className="events-admin" key={item._id}>
                             <div className="icons">
-                                <Link to={`/editevent/${item._id}`}><i className="fas fa-edit"></i></Link>
+                                <Link to={`/editsocial/${item._id}`}><i className="fas fa-edit"></i></Link>
                                 <i className="fas fa-trash" onClick={() => deleteSocial(item._id)}></i>
                             </div>
 

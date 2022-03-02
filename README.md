@@ -1,6 +1,4 @@
-IEEE UIUC
-###cpanel command to kill cuncurrent processes
-# 1
-`ps auxf`
-# 2
-`kill -9 PID`
+# IEEE UIUC webiste
+
+## created for IEEE UIUC branch
+now hosted on IEEE github [https://github.com/ieee-uiuc/ieee.illinois.edu]
